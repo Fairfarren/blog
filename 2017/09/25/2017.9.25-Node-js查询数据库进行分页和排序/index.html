@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Node.js,MongoDB," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="准备MongoDB数据的结构  vue页面，axios做的代理，不懂怎么做代理可以查看Node.js连接MongoDB,vue的axios做代理1234567891011121314151617181920&amp;lt;div id=&quot;axios&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;button @click=&quot;get(1,4)&quot;&amp;gt;get1&amp;lt;/button&amp;gt;">
+<meta name="keywords" content="Node.js,MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js查询数据库进行分页和排序">
+<meta property="og:url" content="https://fairfarren.github.io/2017/09/25/2017.9.25-Node-js查询数据库进行分页和排序/index.html">
+<meta property="og:site_name" content="曼妥思的博客">
+<meta property="og:description" content="准备MongoDB数据的结构  vue页面，axios做的代理，不懂怎么做代理可以查看Node.js连接MongoDB,vue的axios做代理1234567891011121314151617181920&amp;lt;div id=&quot;axios&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;button @click=&quot;get(1,4)&quot;&amp;gt;get1&amp;lt;/button&amp;gt;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2017/09/25/59c8ada372ebc.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/25/59c8b31708137.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/25/59c8b3169915e.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/25/59c8b311971eb.jpeg">
+<meta property="og:updated_time" content="2017-10-06T15:13:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js查询数据库进行分页和排序">
+<meta name="twitter:description" content="准备MongoDB数据的结构  vue页面，axios做的代理，不懂怎么做代理可以查看Node.js连接MongoDB,vue的axios做代理1234567891011121314151617181920&amp;lt;div id=&quot;axios&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;button @click=&quot;get(1,4)&quot;&amp;gt;get1&amp;lt;/button&amp;gt;">
+<meta name="twitter:image" content="https://i.loli.net/2017/09/25/59c8ada372ebc.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2017/09/25/2017.9.25-Node-js查询数据库进行分页和排序/"/>
+
+
+
+
+
+  <title>Node.js查询数据库进行分页和排序 | 曼妥思的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼妥思的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">你好，我叫曼妥思,真的很曼妥思的曼妥思</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/25/2017.9.25-Node-js查询数据库进行分页和排序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曼妥思">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼妥思的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Node.js查询数据库进行分页和排序</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T15:14:37+08:00">
+                2017-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/好好学习天天向上/" itemprop="url" rel="index">
+                    <span itemprop="name">好好学习天天向上</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>MongoDB数据的结构</p>
+<p><img src="https://i.loli.net/2017/09/25/59c8ada372ebc.jpeg" alt="WechatIMG17.jpeg"></p>
+<p>vue页面，axios做的代理，不懂怎么做代理可以查看<a href="/2017/09/24/2017.9.24-Node-js%E8%BF%9E%E6%8E%A5MongoDB-vue%E7%9A%84axios%E5%81%9A%E4%BB%A3%E7%90%86/">Node.js连接MongoDB,vue的axios做代理</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"axios"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"get(1,4)"</span>&gt;</span>get1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"get(-1,4)"</span>&gt;</span>get-1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"post"</span>&gt;</span>post<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"page++"</span>&gt;</span>page++<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"page--"</span>&gt;</span>page--<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;page&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"lists in list"</span>&gt;</span></div><div class="line">                姓名：&#123;&#123;lists.name&#125;&#125;</div><div class="line">                年龄：&#123;&#123;lists.age&#125;&#125;</div><div class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">data ()&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        list : [],</div><div class="line">        page : <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">&#125;,</div><div class="line">methods:&#123;</div><div class="line">    get(sort,pageSize)&#123;</div><div class="line">        axios.get(<span class="string">'/goods'</span>,&#123;</div><div class="line">            params : &#123;</div><div class="line">                sort : sort,<span class="comment">//排序</span></div><div class="line">                page : <span class="keyword">this</span>.page,</div><div class="line">                pageSize : pageSize</div><div class="line">            &#125;</div><div class="line">        &#125;).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</div><div class="line">            <span class="keyword">this</span>.list = res.data.result.list</div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.list.length &lt;= <span class="number">0</span>)&#123;</div><div class="line">                <span class="keyword">this</span>.list = [&#123;<span class="attr">name</span>:<span class="string">'没有了'</span>,<span class="attr">age</span>:<span class="string">'真的没有了'</span>&#125;]</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">console</span>.log(res.data);</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="排序和分页"><a href="#排序和分页" class="headerlink" title="排序和分页"></a>排序和分页</h2><p>升序或者降序，这里都是前端传值。用的<code>sort()</code>方法，所以前端传1，或者-1就行。</p>
+<p>一页多少，第几页，也是前端传值，所以需要前端判断。</p>
+<p>打开node.js<code>routes</code>文件夹下面的<code>goods.js</code>文件，对部分进行修改，之前的配置在这里<a href="/2017/09/24/2017.9.24-Node-js%E8%BF%9E%E6%8E%A5MongoDB-vue%E7%9A%84axios%E5%81%9A%E4%BB%A3%E7%90%86/">Node.js连接MongoDB,vue的axios做代理</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">router.get(<span class="string">'/'</span>,(req,res,next)=&gt;&#123;</div><div class="line"></div><div class="line">    <span class="comment">//排序</span></div><div class="line">    <span class="keyword">let</span> sort = req.param(<span class="string">'sort'</span>);<span class="comment">//获取前端的传值‘sort’字段的值</span></div><div class="line"></div><div class="line">    <span class="comment">//分页</span></div><div class="line">    <span class="keyword">let</span> page = <span class="built_in">parseInt</span>( req.param(<span class="string">'page'</span>) );<span class="comment">//当前第几页</span></div><div class="line">    <span class="keyword">let</span> pageSize = <span class="built_in">parseInt</span>( req.param(<span class="string">'pageSize'</span>) );<span class="comment">//一页多少条</span></div><div class="line">    <span class="keyword">let</span> skip = (page - <span class="number">1</span>) * pageSize;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">let</span> params = &#123;&#125;;<span class="comment">//定义一个查找的方法</span></div><div class="line">    <span class="keyword">let</span> goodsModel = Goods.find(params).skip(skip).limit(pageSize);<span class="comment">//通过这样的查找方法去定义一个模型，可以通过这个模型去做别的事。</span></div><div class="line">    <span class="comment">//skip()表示需要跳过多少条。</span></div><div class="line">    <span class="comment">//limit()表示向后查找多少条。</span></div><div class="line"></div><div class="line">    goodsModel.sort(&#123;<span class="string">'age'</span> : sort&#125;);<span class="comment">//MongoDB里面全是对象，所以查找也是对象,1为升序，-1为降序</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">//返回数据，成功，失败</span></div><div class="line">    goodsModel.exec(<span class="function">(<span class="params">err,doc</span>)=&gt;</span>&#123;<span class="comment">//这里改为goodsModel.extc,因为前面已经拿到参数了，第一个&#123;&#125;也可以删掉了</span></div><div class="line">        <span class="comment">//格式自定</span></div><div class="line">        <span class="keyword">if</span>(err)&#123;</div><div class="line">            res.json(&#123;</div><div class="line">                status:<span class="string">'1'</span>,</div><div class="line">                msg:err.message</div><div class="line">            &#125;)</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            res.json(&#123;</div><div class="line">                status:<span class="string">'0'</span>,</div><div class="line">                msg:<span class="string">'成功'</span>,</div><div class="line">                result:&#123;</div><div class="line">                    count:doc.length,</div><div class="line">                    list:doc</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>开启node.js，MongoDB和vue</p>
+<p>通过vue发送一个get请求，得到下面结果</p>
+<p><img src="https://i.loli.net/2017/09/25/59c8b31708137.jpeg" alt=""><br><img src="https://i.loli.net/2017/09/25/59c8b3169915e.jpeg" alt=""><br><img src="https://i.loli.net/2017/09/25/59c8b311971eb.jpeg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我，曼妥思，打钱</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="曼妥思 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="曼妥思 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+          
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/24/2017.9.24-Node-js连接MongoDB-vue的axios做代理/" rel="next" title="Node.js连接MongoDB,vue的axios做代理">
+                <i class="fa fa-chevron-left"></i> Node.js连接MongoDB,vue的axios做代理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/25/2017.9.27-flex的整理/" rel="prev" title="flex的整理">
+                flex的整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg"
+              alt="曼妥思" />
+          
+            <p class="site-author-name" itemprop="name">曼妥思</p>
+            <p class="site-description motion-element" itemprop="description">记载一点自己的学习笔记</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/fairfarren/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="苏天天~" target="_blank">苏天天~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="小珊珊" target="_blank">小珊珊</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序和分页"><span class="nav-number">2.</span> <span class="nav-text">排序和分页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">3.</span> <span class="nav-text">启动</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼妥思</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

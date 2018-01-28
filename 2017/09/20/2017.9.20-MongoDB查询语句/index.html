@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="MongoDB," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="MongoDB查询语句基本的查询语句请参考上一篇MongoDB基本语法 1. 查询条件MongoDB提供了一组比较操作符：$lt/$lte/$gt/$gte/$ne，依次等价于&amp;lt;/&amp;lt;=/&amp;gt;/&amp;gt;=/!=。 下面的示例返回符合条件age &amp;gt;= 19 &amp;amp;&amp;amp; age &amp;lt;= 25  db.user.find({‘age’:{$gte:19,$lte:25}">
+<meta name="keywords" content="MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB查询语句">
+<meta property="og:url" content="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB查询语句/index.html">
+<meta property="og:site_name" content="曼妥思的博客">
+<meta property="og:description" content="MongoDB查询语句基本的查询语句请参考上一篇MongoDB基本语法 1. 查询条件MongoDB提供了一组比较操作符：$lt/$lte/$gt/$gte/$ne，依次等价于&amp;lt;/&amp;lt;=/&amp;gt;/&amp;gt;=/!=。 下面的示例返回符合条件age &amp;gt;= 19 &amp;amp;&amp;amp; age &amp;lt;= 25  db.user.find({‘age’:{$gte:19,$lte:25}">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c22ebe2820d.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c22eb8e5028.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c22ebc523b3.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c22ebe838c3.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2308292abc.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2308298d35.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c236d547c39.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd186b0c.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd158738.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd184282.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd4d5b6c.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd196c20.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd35cfd8.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd5e0ccf.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd63d844.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd71ab46.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c23dd748d50.jpeg">
+<meta property="og:updated_time" content="2017-10-06T15:13:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MongoDB查询语句">
+<meta name="twitter:description" content="MongoDB查询语句基本的查询语句请参考上一篇MongoDB基本语法 1. 查询条件MongoDB提供了一组比较操作符：$lt/$lte/$gt/$gte/$ne，依次等价于&amp;lt;/&amp;lt;=/&amp;gt;/&amp;gt;=/!=。 下面的示例返回符合条件age &amp;gt;= 19 &amp;amp;&amp;amp; age &amp;lt;= 25  db.user.find({‘age’:{$gte:19,$lte:25}">
+<meta name="twitter:image" content="https://i.loli.net/2017/09/20/59c22ebe2820d.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB查询语句/"/>
+
+
+
+
+
+  <title>MongoDB查询语句 | 曼妥思的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼妥思的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">你好，我叫曼妥思,真的很曼妥思的曼妥思</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB查询语句/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曼妥思">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼妥思的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MongoDB查询语句</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T16:36:47+08:00">
+                2017-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/好好学习天天向上/" itemprop="url" rel="index">
+                    <span itemprop="name">好好学习天天向上</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="MongoDB查询语句"><a href="#MongoDB查询语句" class="headerlink" title="MongoDB查询语句"></a>MongoDB查询语句</h1><p><em>基本的查询语句请参考上一篇<a href="/2017/09/20/2017.9.20-MongoDB%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">MongoDB基本语法</a></em></p>
+<h2 id="1-查询条件"><a href="#1-查询条件" class="headerlink" title="1. 查询条件"></a>1. 查询条件</h2><p>MongoDB提供了一组比较操作符：<code>$lt/$lte/$gt/$gte/$ne</code>，依次等价于<code>&lt;/&lt;=/&gt;/&gt;=/!=</code>。</p>
+<p><em>下面的示例返回符合条件age &gt;= 19 &amp;&amp; age &lt;= 25</em></p>
+<blockquote>
+<p>db.user.find({‘age’:{$gte:19,$lte:25}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c22ebe2820d.jpeg" alt=""></p>
+<p><em>下面的示例返回条件符合name != “haha”</em></p>
+<blockquote>
+<p>db.user.find({“name”:{“$ne”:”haha”}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c22eb8e5028.jpeg" alt=""></p>
+<p><em>$in等同于SQL中的in，下面的示例等同于SQL中的in (“haha”,”laji”)</em></p>
+<blockquote>
+<p>db.user.find({“name”:{“$in”:[“haha”,”laji”]}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c22ebc523b3.jpeg" alt=""></p>
+<p><em>$nin等同于SQL中的not in，同时也是$in的取反。</em></p>
+<blockquote>
+<p>db.user.find({“name”:{“$nin”:[“haha”,”laji”]}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c22ebe838c3.jpeg" alt=""></p>
+<p><em>$or等同于SQL中的or，$or所针对的条件被放到一个数组中，每个数组元素表示or的一个条件。下面的示例等同于name = “haha” or age = 19</em></p>
+<blockquote>
+<p>db.user.find({“$or”: [{“name”:”haha”}, {“age”:19}]})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c2308292abc.jpeg" alt=""></p>
+<p><em>下面的示例演示了如何混合使用$or和$in。</em></p>
+<blockquote>
+<p>db.user.find({“$or”: [{“name”:{“$in”:[“haha”,”laji”]}}, {“age”:19}]})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c2308298d35.jpeg" alt=""></p>
+<h2 id="2-正则查询"><a href="#2-正则查询" class="headerlink" title="2. 正则查询"></a>2. 正则查询</h2><p><em>i表示忽略大小写</em></p>
+<blockquote>
+<p>db.user.find({‘name’:/lala?/i})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c236d547c39.jpeg" alt=""></p>
+<h2 id="3-数组数据查询"><a href="#3-数组数据查询" class="headerlink" title="3. 数组数据查询"></a>3. 数组数据查询</h2><p><em>数组中所有包含banana的文档都会被检索出来。</em></p>
+<blockquote>
+<p>db.test.find({“fruit”:”banana”})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd186b0c.jpeg" alt=""></p>
+<p><em>检索数组中需要包含多个元素的情况，这里使用$all。下面的示例中，数组中必须同时包含apple和banana，但是他们的顺序无关紧要。</em></p>
+<blockquote>
+<p>db.test.find({“fruit”: {“$all”: [“banana”,”apple”]}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd158738.jpeg" alt=""></p>
+<p> <em>下面的示例表示精确匹配，即被检索出来的文档，fruit值中的数组数据必须和查询条件完全匹配，即不能多，也不能少，顺序也必须保持一致。</em></p>
+<blockquote>
+<p>db.test.find({“fruit”:[“apple”,”banana”,”peach”]})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd184282.jpeg" alt=""></p>
+<p><em>下面的示例将匹配数组中指定下标元素的值。数组的起始下标是0。fruit[2] = ‘peach’的那一条</em></p>
+<blockquote>
+<p>db.test.find({“fruit.2”:”peach”})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd4d5b6c.jpeg" alt=""></p>
+<p><em>可以通过$size获取数组的长度，但是$size不能和比较操作符联合使用。</em></p>
+<blockquote>
+<p>db.test.find({“fruit”: {$size : 3}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd196c20.jpeg" alt=""></p>
+<p><em>如果需要检索size &gt; n的结果，不能直接使用$size，只能是添加一个额外的键表示数据中的元素数据，在操作数据中的元素时，需要同时更新size键的值。为后面的实验构造数据。</em></p>
+<blockquote>
+<p>db.test.update({}, {“$set”: {“size”:3}},false,true)</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd35cfd8.jpeg" alt=""></p>
+<p><em>每次添加一个新元素，都要原子性的自增size一次。</em></p>
+<blockquote>
+<p>test.update({},{“$push”:{“fruit”:”strawberry”},”$inc”:{“size”:1}},false,true)</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd5e0ccf.jpeg" alt=""></p>
+<p><em>通过$slice返回数组中的部分数据。”$slice”:2表示数组中的前两个元素。</em></p>
+<blockquote>
+<p>db.test.find({},{“fruit”: {“$slice”:2}, “size”:0})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd63d844.jpeg" alt=""></p>
+<p><em>通过$slice返回数组中的部分数据。”$slice”:-2表示数组中的后两个元素。</em></p>
+<blockquote>
+<p>db.test.find({},{“fruit”: {“$slice”:-2}, “size”:0})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd71ab46.jpeg" alt=""></p>
+<p><em>$slice : [2,1]，表示从第二个2元素开始取1个，如果获取数量大于2后面的元素数量，则取后面的全部数据。</em></p>
+<blockquote>
+<p>db.test.find({},{“fruit”: {“$slice”:[2,1]}, “size”:0})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c23dd748d50.jpeg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我，曼妥思，打钱</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="曼妥思 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="曼妥思 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/20/2017.9.20-MongoDB基本语法/" rel="next" title="MongoDB基本语法">
+                <i class="fa fa-chevron-left"></i> MongoDB基本语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/21/2017.9.21-Node-js基础/" rel="prev" title="Node.js基础">
+                Node.js基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg"
+              alt="曼妥思" />
+          
+            <p class="site-author-name" itemprop="name">曼妥思</p>
+            <p class="site-description motion-element" itemprop="description">记载一点自己的学习笔记</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/fairfarren/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="苏天天~" target="_blank">苏天天~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="小珊珊" target="_blank">小珊珊</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MongoDB查询语句"><span class="nav-number">1.</span> <span class="nav-text">MongoDB查询语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-查询条件"><span class="nav-number">1.1.</span> <span class="nav-text">1. 查询条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-正则查询"><span class="nav-number">1.2.</span> <span class="nav-text">2. 正则查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数组数据查询"><span class="nav-number">1.3.</span> <span class="nav-text">3. 数组数据查询</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼妥思</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

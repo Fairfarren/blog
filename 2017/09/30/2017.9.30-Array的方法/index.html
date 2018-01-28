@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Array的方法整理">
+<meta property="og:url" content="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/index.html">
+<meta property="og:site_name" content="曼妥思的博客">
+<meta property="og:description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-08T13:09:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Array的方法整理">
+<meta name="twitter:description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/"/>
+
+
+
+
+
+  <title>Array的方法整理 | 曼妥思的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼妥思的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">你好，我叫曼妥思,真的很曼妥思的曼妥思</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曼妥思">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼妥思的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Array的方法整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T15:14:37+08:00">
+                2017-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础很重要/" itemprop="url" rel="index">
+                    <span itemprop="name">基础很重要</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。</p>
+<h2 id="关于Array"><a href="#关于Array" class="headerlink" title="关于Array"></a>关于Array</h2><p>在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。</p>
+<h3 id="创建一个数组"><a href="#创建一个数组" class="headerlink" title="创建一个数组"></a>创建一个数组</h3><ul>
+<li>使用构造函数的方法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>也可以用这个方法直接指定数组的长度：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">20</span>);</div></pre></td></tr></table></figure></p>
+<p>还可以直接给数组内部加入数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>)</div></pre></td></tr></table></figure></p>
+<ul>
+<li>使用数组字面量的方法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>直接在数组内添加数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> number = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure></p>
+<h3 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h3><ul>
+<li>访问数组内部的值</li>
+</ul>
+<p>通过 <code>[]</code>里面加上数字索引去访问，从0开始<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors[<span class="number">2</span>] ); <span class="comment">//'pink'</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>数组的长度</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.length ); <span class="comment">//3</span></div></pre></td></tr></table></figure>
+<p>数组长度是从1开始数的，所以最大长度比最大的索引会大1，这样也方便了直接在最后一位添加数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line">colors[ colors.length ] = <span class="string">'black'</span>;</div><div class="line"><span class="built_in">console</span>.log( colors ); <span class="comment">//['red','blue','pink','black'];</span></div></pre></td></tr></table></figure></p>
+<h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><p>检查一个变量是不是数组，方法有两种</p>
+<p>ES3中使用<code>instanceof</code>方法去判断，返回一个<code>boolear</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( list <span class="keyword">instanceof</span> <span class="built_in">Array</span> ); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>ES5后使用<code>Array.isArray()</code>方法去判断，返回一个<code>boolear</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>.isArray(list) ); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p><strong>ES3中的方法会导致在不同执行环境下，创建的数组会有各自不同的够构造函数，在ES5中解决了</strong></p>
+<h2 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h2><p>将数组转成字符串：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.toString() );<span class="comment">//red,blue,pink</span></div><div class="line"><span class="built_in">console</span>.log( colors.toLocaleString() );<span class="comment">//red,blue,pink</span></div></pre></td></tr></table></figure></p>
+<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><p><code>toString()</code>和<code>toLocaleString()</code>方法都会将数组转成字符串，用逗号隔开，如果要选用自己喜欢的符号去隔开，那么要采用<code>join()</code>方法。方法会返回从组后的字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.join(<span class="string">'我'</span>) ); <span class="comment">//red我blue我pink</span></div></pre></td></tr></table></figure></p>
+<p><strong>可以是任意的字符串去隔开</strong></p>
+<h2 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h2><p>提供了<code>push()</code>和<code>pop()</code>方法，以便实现栈的行为。</p>
+<h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p><code>push()</code>方法可以接收任意数量的参数，把他们逐个添加到数组末尾，并返回修改后数组的长度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">'red'</span>,<span class="string">'blue'</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p><code>pop()</code>方法从数组末尾移除最后一项，减少数组的<code>length</code>值，然后返回移除的项。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> item = colors.pop();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// 'pink'</span></div><div class="line"><span class="built_in">console</span>.log( colors )<span class="comment">// ['red','blue']</span></div></pre></td></tr></table></figure></p>
+<h2 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h2><p>队列在列表的末端添加项，从列表的前端移除项。</p>
+<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>移除数组第一项，并返回第一项的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> item = colors.shift();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// 'red'</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['blue','pink']</span></div></pre></td></tr></table></figure></p>
+<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>它能在数组前端添加任意项，并返回长度<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> count = colors.unshift(<span class="string">'black'</span>,<span class="string">'white'</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['black','white','red','blue','pink']</span></div></pre></td></tr></table></figure></p>
+<p><strong>在IE7下面<code>unshift()</code>会总是返回undefined，IE8在非兼容模式下回返回正确长度</strong></p>
+<h2 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h2><p>数组中已经存在两个可以直接用的重排序的方法：<code>reverse()</code>和<code>sort()</code></p>
+<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>会将数组现在的顺序颠倒，然后返回重新排序后的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line">colors.reverse();</div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['pink','blue','red']</span></div></pre></td></tr></table></figure></p>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>默认将数组数组转成字符串，然后从小到大进行排序，然后返回一个重新排序后的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>];</div><div class="line">values.sort();</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,10,15,5]</span></div></pre></td></tr></table></figure></p>
+<p>这样显然和想象中的不一样，因为上面是直接进行的字符串的比较，而不是数值类型的比较。可以给<code>sort()</code>传入一个方法，返回数值类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> a - b;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort(compare);</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,5,8,10,15]</span></div></pre></td></tr></table></figure>
+<p>从小到大是<code>return a - b</code>，从大到小是<code>return b - a</code></p>
+<p>其实我比较推荐ES6的箭头函数，更简洁<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort( <span class="function">(<span class="params">a,b</span>)=&gt;</span>a - b );</div></pre></td></tr></table></figure></p>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p>js中对数组的操作还有很多方法</p>
+<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat</code>方法可以基于当前数组中的所有项创建一个新数组。此方法会创建一个副本，然后返回重组的新数组，并不会对原数组进行操作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">'black'</span>,[<span class="string">'white'</span>,<span class="string">'yellow'</span>]);</div><div class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//['red','blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log(colors2);<span class="comment">//['red','blue','pink','black','white','yellow']</span></div></pre></td></tr></table></figure></p>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code>方法接收两个参数，第一个为必填：返回项的起始位置，第二个可选：结束位置。如果没有第二个参数，则默认从起始位置到结束。截取位置计算方法是<code>&gt;=起始位置,&lt;结束位置</code>。方法最后返回截取的这段数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log( colors2 );<span class="comment">//['blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log( colors3 );<span class="comment">//['blue']</span></div></pre></td></tr></table></figure></p>
+<p>如果传值为负数，那么就用数组的<code>length</code>加上它，作为参数来计算。如果结束位置小于起始位置，则返回空数组。</p>
+<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><ul>
+<li>有3种用法<ol>
+<li>删除：<ul>
+<li>指定两个参数，第一个参数：删除的起始位置，第二个参数：要删除的项数。如<code>splice(0,2)</code>会删除前面2项。</li>
+</ul>
+</li>
+<li>插入：<ul>
+<li>可以指定位置插入任意数量的项，指定三个参数，第一个参数：起始位置，第二个参数：0（删除0项），第三个参数：插入的内容。可以插入多项，比如<code>splice(1,0,&#39;hello&#39;,&#39;world&#39;)</code>从索引为1的地方开始插入’hello’和’world’。</li>
+</ul>
+</li>
+<li>替换：<ul>
+<li>结合前面两条可以得到此项，比如从起始位置删除2条，再加入2条，就成了替换了<code>splice(1,2,&#39;hello&#39;,&#39;world&#39;)</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><code>splice()</code>会返回删除的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>,<span class="string">'black'</span>,<span class="string">'white'</span>];</div><div class="line"><span class="keyword">var</span> removed1 = colors.splice(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">//['blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['red','black','white']</span></div><div class="line"><span class="keyword">var</span> removed2 = colors.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="string">'hello'</span>);<span class="comment">//[]</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['hello','red','black','white']</span></div><div class="line"><span class="keyword">var</span> removed3 = colors.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">'world'</span>);<span class="comment">//['red']</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['hello','world','black','white']</span></div></pre></td></tr></table></figure></p>
+<h2 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h2><p>ES5为数组实例添加了两个位置方法：<code>indexOf()</code>和<code>lastIndexOf()</code>。这两个方法接收两个参数：要查找的项和（可选的）表示查找位置起点的索引。</p>
+<p><strong>在没有找到的情况下会返回<code>-1</code>，在比较参数的时候会使用<code>全等</code>，也就是用<code>===</code>进行比较</strong></p>
+<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p>重数组开头查找，然后返回查找到的第一个字符在数组中的位置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>) );<span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">'liu'</span> &#125;;</div><div class="line"><span class="keyword">var</span> people = [&#123; <span class="attr">name</span>: <span class="string">'liu'</span> &#125;];</div><div class="line"></div><div class="line"><span class="keyword">var</span> morePeople = [person];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( people.indexOf(person) );<span class="comment">//-1</span></div><div class="line"><span class="built_in">console</span>.log( morePeople.indexOf(person) )<span class="comment">//0</span></div></pre></td></tr></table></figure>
+<h2 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h2><ul>
+<li><p>ES5数组定义了5个迭代方法：</p>
+<ul>
+<li>every()</li>
+<li>filter()</li>
+<li>forEach()</li>
+<li>map()</li>
+<li>some()</li>
+</ul>
+</li>
+<li><p>这些方法会接收3个参数：</p>
+<ol>
+<li>数组的值</li>
+<li>该项在数组中的位置</li>
+<li>数组对象本身</li>
+</ol>
+</li>
+</ul>
+<h3 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h3><p>对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> everyResult = numbers.every( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( everyResult );<span class="comment">//false</span></div></pre></td></tr></table></figure>
+<h3 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h3><p>对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> someResult = numbers.some( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (itme &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(someResult);<span class="comment">//</span></div></pre></td></tr></table></figure>
+<p><strong><code>some()</code>和<code>every()</code>比较像，一个是有一项返回true则返回true，一个必须所有都为true，则返回true</strong></p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><p>对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> ( item &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[3,4,5,4,3]</span></div></pre></td></tr></table></figure>
+<p><strong>这个方法对查询符合某些条件的所有数组项非常有用</strong></p>
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><p>对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span>  item * <span class="number">2</span>;</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[2,4,6,8,10,8,6,4,2]</span></div></pre></td></tr></table></figure>
+<p><strong>这个方法适合创建包含的项与另一个数组一一对应的数组</strong></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><p>对数组中的每一项运行给定函数，这个方法没有返回值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line">numbers.forEach( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>)</span>&#123;</div><div class="line">    <span class="comment">//执行操作</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>支队数组中的每项运行传入的函数，和<code>for</code>类似</strong></p>
+<h2 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h2><p>ES5新增的两个归并方法：<code>reduce()</code>和<code>reduceRight()</code>。这两个方法都会迭代数组的所有项，然后构建一个最终返回的值。</p>
+<p><code>reduce()</code>是从第一项开始操作，而<code>reduceRight()</code>是从最后一项开始操作。</p>
+<ul>
+<li>他们的函数会接收4个参数：<ol>
+<li>前一个值</li>
+<li>当前值</li>
+<li>项的索引</li>
+<li>数组对象</li>
+</ol>
+</li>
+</ul>
+<p>这个函数返回的任何值都会作为第一个参数自动传给下一项</p>
+<p><strong>第一次运算会从第二项开始，第一项的值会作为<code>前一个值</code>来运算</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> number = <span class="number">0</span>;</div><div class="line"><span class="keyword">var</span> sum = values.reduce( <span class="function"><span class="keyword">function</span>(<span class="params"> prev, cur, index, array</span>)</span>&#123;</div><div class="line">    number++;</div><div class="line">    <span class="keyword">return</span> prev + cur</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(sum);<span class="comment">//15</span></div><div class="line"><span class="built_in">console</span>.log(number);<span class="comment">//4</span></div></pre></td></tr></table></figure>
+<p><strong>number最后值为4，比数组的length少1</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我，曼妥思，打钱</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="曼妥思 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="曼妥思 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/25/2017.9.27-flex的整理/" rel="next" title="flex的整理">
+                <i class="fa fa-chevron-left"></i> flex的整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/06/2017.10.6-github没贡献/" rel="prev" title="github贡献不增长">
+                github贡献不增长 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg"
+              alt="曼妥思" />
+          
+            <p class="site-author-name" itemprop="name">曼妥思</p>
+            <p class="site-description motion-element" itemprop="description">记载一点自己的学习笔记</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/fairfarren/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="苏天天~" target="_blank">苏天天~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="小珊珊" target="_blank">小珊珊</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Array"><span class="nav-number">1.</span> <span class="nav-text">关于Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个数组"><span class="nav-number">1.1.</span> <span class="nav-text">创建一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问数组"><span class="nav-number">1.2.</span> <span class="nav-text">访问数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测数组"><span class="nav-number">2.</span> <span class="nav-text">检测数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换方法"><span class="nav-number">3.</span> <span class="nav-text">转换方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-number">3.1.</span> <span class="nav-text">join()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈方法"><span class="nav-number">4.</span> <span class="nav-text">栈方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-number">4.1.</span> <span class="nav-text">push()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-number">4.2.</span> <span class="nav-text">pop()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列方法"><span class="nav-number">5.</span> <span class="nav-text">队列方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-number">5.1.</span> <span class="nav-text">shift()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-number">5.2.</span> <span class="nav-text">unshift()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重排序方法"><span class="nav-number">6.</span> <span class="nav-text">重排序方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-number">6.1.</span> <span class="nav-text">reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.2.</span> <span class="nav-text">sort()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作方法"><span class="nav-number">7.</span> <span class="nav-text">操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-number">7.1.</span> <span class="nav-text">concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-number">7.2.</span> <span class="nav-text">slice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-number">7.3.</span> <span class="nav-text">splice()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置方法"><span class="nav-number">8.</span> <span class="nav-text">位置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf"><span class="nav-number">8.1.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代方法"><span class="nav-number">9.</span> <span class="nav-text">迭代方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#every"><span class="nav-number">9.1.</span> <span class="nav-text">every()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some"><span class="nav-number">9.2.</span> <span class="nav-text">some()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">9.3.</span> <span class="nav-text">filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">9.4.</span> <span class="nav-text">map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-number">9.5.</span> <span class="nav-text">forEach()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并方法"><span class="nav-number">10.</span> <span class="nav-text">归并方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼妥思</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="MongoDB," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="MongoDB基本语法基本概念，和MySQL对比   SQL术语/概念 MongoDB术语/概念 解释/说明     database database 数据库   table collection 数据库表/集合   row document 数据记录/文档   column field 数据字段/域   index index 索引   table joins  表连接，MongoDB不支持">
+<meta name="keywords" content="MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB基本语法">
+<meta property="og:url" content="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB基本语法/index.html">
+<meta property="og:site_name" content="曼妥思的博客">
+<meta property="og:description" content="MongoDB基本语法基本概念，和MySQL对比   SQL术语/概念 MongoDB术语/概念 解释/说明     database database 数据库   table collection 数据库表/集合   row document 数据记录/文档   column field 数据字段/域   index index 索引   table joins  表连接，MongoDB不支持">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2148bc2edd.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2179e3f44f.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2179e64ac4.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c21843aa375.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c218da131af.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c21a37e97c7.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c21c09b0f52.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c21c50691e2.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c21cd87621f.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c220813e3b6.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c221b6af3f7.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c222ee29aa5.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c2247f05e82.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c224e8807a4.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c22547c8c1f.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/09/20/59c227e92c834.jpeg">
+<meta property="og:updated_time" content="2017-10-06T15:13:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MongoDB基本语法">
+<meta name="twitter:description" content="MongoDB基本语法基本概念，和MySQL对比   SQL术语/概念 MongoDB术语/概念 解释/说明     database database 数据库   table collection 数据库表/集合   row document 数据记录/文档   column field 数据字段/域   index index 索引   table joins  表连接，MongoDB不支持">
+<meta name="twitter:image" content="https://i.loli.net/2017/09/20/59c2148bc2edd.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB基本语法/"/>
+
+
+
+
+
+  <title>MongoDB基本语法 | 曼妥思的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼妥思的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">你好，我叫曼妥思,真的很曼妥思的曼妥思</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/20/2017.9.20-MongoDB基本语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曼妥思">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼妥思的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MongoDB基本语法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T14:37:27+08:00">
+                2017-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/好好学习天天向上/" itemprop="url" rel="index">
+                    <span itemprop="name">好好学习天天向上</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="MongoDB基本语法"><a href="#MongoDB基本语法" class="headerlink" title="MongoDB基本语法"></a>MongoDB基本语法</h1><h3 id="基本概念，和MySQL对比"><a href="#基本概念，和MySQL对比" class="headerlink" title="基本概念，和MySQL对比"></a>基本概念，和MySQL对比</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">SQL术语/概念</th>
+<th style="text-align:left">MongoDB术语/概念</th>
+<th style="text-align:left">解释/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">database</td>
+<td style="text-align:left">database</td>
+<td style="text-align:left">数据库</td>
+</tr>
+<tr>
+<td style="text-align:left">table</td>
+<td style="text-align:left">collection</td>
+<td style="text-align:left">数据库表/集合</td>
+</tr>
+<tr>
+<td style="text-align:left">row</td>
+<td style="text-align:left">document</td>
+<td style="text-align:left">数据记录/文档</td>
+</tr>
+<tr>
+<td style="text-align:left">column</td>
+<td style="text-align:left">field</td>
+<td style="text-align:left">数据字段/域</td>
+</tr>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">index</td>
+<td style="text-align:left">索引</td>
+</tr>
+<tr>
+<td style="text-align:left">table joins</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">表连接，MongoDB不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">primary key</td>
+<td style="text-align:left">primary key</td>
+<td style="text-align:left">主键，MongoDB自动将_id字段设置为主键</td>
+</tr>
+</tbody>
+</table>
+<p>首先开启mongod，然后进入mongo操作终端下</p>
+<p>查看数据库</p>
+<blockquote>
+<p>show dbs</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c2148bc2edd.jpeg" alt=""></p>
+<p>创建一个数据库</p>
+<blockquote>
+<p>use newDemo</p>
+</blockquote>
+<p><strong>创建完成后必须插入数据，否则查询不到</strong></p>
+<p>创建集合</p>
+<ul>
+<li><p>直接创建集合，名字为<code>user</code></p>
+<ul>
+<li><blockquote>
+<p>db.createCollection(“user”)</p>
+</blockquote>
+</li>
+<li><p><img src="https://i.loli.net/2017/09/20/59c2179e3f44f.jpeg" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>或者写入集合名字和数据，集合名为<code>users</code></p>
+<ul>
+<li><blockquote>
+<p>db.users.insert({‘firstName’:’YK’,’lastName’:’L’})</p>
+</blockquote>
+</li>
+<li><p><img src="https://i.loli.net/2017/09/20/59c2179e64ac4.jpeg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>查看当前数据库集合</p>
+<blockquote>
+<p>show collections</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c21843aa375.jpeg" alt=""></p>
+<p>删除数据库</p>
+<blockquote>
+<p>db.dropDatabase()</p>
+</blockquote>
+<p>再通过<code>show dbs</code>已经看不见数据库<code>newDemo</code>了<br><img src="https://i.loli.net/2017/09/20/59c218da131af.jpeg" alt=""></p>
+<p>删除一个集合<code>user</code></p>
+<blockquote>
+<p>db.user.drop()</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c21a37e97c7.jpeg" alt=""></p>
+<p>查看集合<code>user</code>的所有数据</p>
+<blockquote>
+<p>db.user.find()</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c21c09b0f52.jpeg" alt=""></p>
+<p>查看数据并将数据格式化</p>
+<blockquote>
+<p>db.user.find().pretty()</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c21c50691e2.jpeg" alt=""></p>
+<p>查看第一条数据</p>
+<blockquote>
+<p>db.user.findOnd()</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c21cd87621f.jpeg" alt=""></p>
+<p>更改数据</p>
+<p><em>需要注意，因为之前设置id的值得时候是数字，所以这里也用数字 1 去查找，而不是字符串‘1’去查找</em></p>
+<blockquote>
+<p>db.user.update({‘id’:1},{$set:{‘age’:20}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c220813e3b6.jpeg" alt=""></p>
+<p>更新子文档</p>
+<blockquote>
+<p>db.user.update({‘id’:1},{$set:{‘class.name’:’qqq111’}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c221b6af3f7.jpeg" alt=""></p>
+<p>查询数据和子数据</p>
+<blockquote>
+<p>db.user.find({‘id’:1})<br>db.user.find({‘class.name’:’qqq111’})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c222ee29aa5.jpeg" alt=""></p>
+<p>大于条件查询</p>
+<blockquote>
+<p>db.user.find({‘age’:{$gt:15}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c2247f05e82.jpeg" alt=""></p>
+<p>小于条件查询</p>
+<blockquote>
+<p>db.user.find({‘age’:{$lt:15}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c224e8807a4.jpeg" alt=""></p>
+<p>等于条件查询</p>
+<blockquote>
+<p>db.user.find({‘age’:{$eq:14}})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c22547c8c1f.jpeg" alt=""></p>
+<p>删除某一条数据</p>
+<blockquote>
+<p>db.user.remove({id:1})</p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/09/20/59c227e92c834.jpeg" alt=""></p>
+<p>直接导入数据库<strong>推荐使用robomongo直接导入</strong></p>
+<p>首先创建一个集合</p>
+<blockquote>
+<p>db.createCollection(“dbDemo”)</p>
+</blockquote>
+<p>然后在一个新的终端输入</p>
+<blockquote>
+<p>$ mongoimport -d 数据库名字 -c 集合名字 –file 导入数据库的路径</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我，曼妥思，打钱</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="曼妥思 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="曼妥思 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/19/2017.9.19-MongoDB创建账户/" rel="next" title="MongoDB创建账户">
+                <i class="fa fa-chevron-left"></i> MongoDB创建账户
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/20/2017.9.20-MongoDB查询语句/" rel="prev" title="MongoDB查询语句">
+                MongoDB查询语句 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg"
+              alt="曼妥思" />
+          
+            <p class="site-author-name" itemprop="name">曼妥思</p>
+            <p class="site-description motion-element" itemprop="description">记载一点自己的学习笔记</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/fairfarren/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="苏天天~" target="_blank">苏天天~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="小珊珊" target="_blank">小珊珊</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MongoDB基本语法"><span class="nav-number">1.</span> <span class="nav-text">MongoDB基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念，和MySQL对比"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本概念，和MySQL对比</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼妥思</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
