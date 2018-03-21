@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +12,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,39 +40,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="JavaScript," />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="JavaScript,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
 
 
 
-<meta name="description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+<meta name="description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x5C31;&amp;#x60F3;&amp;#x6574;&amp;#x7406;&amp;#x4E00;&amp;#x4E0B;&amp;#x5173;&amp;#x4E8E;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#x6709;&amp;#x5F88;">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Array的方法整理">
-<meta property="og:url" content="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/index.html">
-<meta property="og:site_name" content="曼妥思的博客">
-<meta property="og:description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+<meta property="og:title" content="Array&#x7684;&#x65B9;&#x6CD5;&#x6574;&#x7406;">
+<meta property="og:url" content="https://fairfarren.github.io/2017/09/30/2017.9.30-Array&#x7684;&#x65B9;&#x6CD5;/index.html">
+<meta property="og:site_name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
+<meta property="og:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x5C31;&amp;#x60F3;&amp;#x6574;&amp;#x7406;&amp;#x4E00;&amp;#x4E0B;&amp;#x5173;&amp;#x4E8E;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#x6709;&amp;#x5F88;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-10-08T13:09:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Array的方法整理">
-<meta name="twitter:description" content="之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。 关于Array在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。 创建一个数组 使用构造函数的方法：1var colors = new Array();   也可以用这个方法直接指定数组的长度：1var colors = new A">
+<meta name="twitter:title" content="Array&#x7684;&#x65B9;&#x6CD5;&#x6574;&#x7406;">
+<meta name="twitter:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x5C31;&amp;#x60F3;&amp;#x6574;&amp;#x7406;&amp;#x4E00;&amp;#x4E0B;&amp;#x5173;&amp;#x4E8E;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#x6709;&amp;#x5F88;">
 
 
 
@@ -110,13 +102,13 @@
 
 
 
-  <link rel="canonical" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/"/>
+  <link rel="canonical" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array&#x7684;&#x65B9;&#x6CD5;/">
 
 
 
 
 
-  <title>Array的方法整理 | 曼妥思的博客</title>
+  <title>Array&#x7684;&#x65B9;&#x6CD5;&#x6574;&#x7406; | &#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</title>
   
 
 
@@ -128,7 +120,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -138,20 +130,20 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">曼妥思的博客</span>
+        <span class="site-title">&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">你好，我叫曼妥思,真的很曼妥思的曼妥思</p>
+        <p class="site-subtitle">&#x4F60;&#x597D;&#xFF0C;&#x6211;&#x53EB;&#x66FC;&#x59A5;&#x601D;,&#x771F;&#x7684;&#x5F88;&#x66FC;&#x59A5;&#x601D;&#x7684;&#x66FC;&#x59A5;&#x601D;</p>
       
   </div>
 
@@ -174,9 +166,9 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            首页
+            &#x9996;&#x9875;
           </a>
         </li>
       
@@ -184,9 +176,9 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            标签
+            &#x6807;&#x7B7E;
           </a>
         </li>
       
@@ -194,9 +186,9 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            分类
+            &#x5206;&#x7C7B;
           </a>
         </li>
       
@@ -204,9 +196,9 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            归档
+            &#x5F52;&#x6863;
           </a>
         </li>
       
@@ -238,21 +230,21 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array的方法/">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2017/09/30/2017.9.30-Array&#x7684;&#x65B9;&#x6CD5;/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="曼妥思">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曼妥思的博客">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
     </span>
 
     
@@ -260,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Array的方法整理</h1>
+          <h1 class="post-title" itemprop="name headline">Array&#x7684;&#x65B9;&#x6CD5;&#x6574;&#x7406;</h1>
         
 
         <div class="post-meta">
@@ -270,9 +262,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">&#x53D1;&#x8868;&#x4E8E;</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T15:14:37+08:00">
+              <time title="&#x521B;&#x5EFA;&#x4E8E;" itemprop="dateCreated datePublished" datetime="2017-09-30T15:14:37+08:00">
                 2017-09-30
               </time>
             
@@ -283,7 +275,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -291,12 +283,12 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">&#x5206;&#x7C7B;&#x4E8E;</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础很重要/" itemprop="url" rel="index">
-                    <span itemprop="name">基础很重要</span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/&#x57FA;&#x7840;&#x5F88;&#x91CD;&#x8981;/" itemprop="url" rel="index">
+                    <span itemprop="name">&#x57FA;&#x7840;&#x5F88;&#x91CD;&#x8981;</span>
                   </a>
                 </span>
 
@@ -316,7 +308,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -337,77 +329,77 @@
       
 
       
-        <p>之前就想整理一下关于数组的方法，因为数组的方法有很多，使用也很频繁。特别是手动截取字符串，页面重新排序的时候。</p>
-<h2 id="关于Array"><a href="#关于Array" class="headerlink" title="关于Array"></a>关于Array</h2><p>在js的数组中，每一项可以保存成任意数据类型。也就是说可以第一项是字符串，第二项是数值，第三项是一个对象。</p>
-<h3 id="创建一个数组"><a href="#创建一个数组" class="headerlink" title="创建一个数组"></a>创建一个数组</h3><ul>
-<li>使用构造函数的方法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
+        <p>&#x4E4B;&#x524D;&#x5C31;&#x60F3;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x5173;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x4F7F;&#x7528;&#x4E5F;&#x5F88;&#x9891;&#x7E41;&#x3002;&#x7279;&#x522B;&#x662F;&#x624B;&#x52A8;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9875;&#x9762;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<h2 id="&#x5173;&#x4E8E;Array"><a href="#&#x5173;&#x4E8E;Array" class="headerlink" title="&#x5173;&#x4E8E;Array"></a>&#x5173;&#x4E8E;Array</h2><p>&#x5728;js&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x6210;&#x4EFB;&#x610F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53EF;&#x4EE5;&#x7B2C;&#x4E00;&#x9879;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7B2C;&#x4E8C;&#x9879;&#x662F;&#x6570;&#x503C;&#xFF0C;&#x7B2C;&#x4E09;&#x9879;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</h3><ul>
+<li>&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
-<p>也可以用这个方法直接指定数组的长度：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">20</span>);</div></pre></td></tr></table></figure></p>
-<p>还可以直接给数组内部加入数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>)</div></pre></td></tr></table></figure></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF1A;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">20</span>);</div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;&#x6570;&#x7EC4;&#x5185;&#x90E8;&#x52A0;&#x5165;&#x6570;&#x636E;&#xFF1A;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>)</div></pre></td></tr></tbody></table></figure><p></p>
 <ul>
-<li>使用数组字面量的方法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];</div></pre></td></tr></table></figure>
+<li>&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];</div></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
-<p>直接在数组内添加数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> number = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure></p>
-<h3 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h3><ul>
-<li>访问数组内部的值</li>
+<p>&#x76F4;&#x63A5;&#x5728;&#x6570;&#x7EC4;&#x5185;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#xFF1A;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> number = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="&#x8BBF;&#x95EE;&#x6570;&#x7EC4;"><a href="#&#x8BBF;&#x95EE;&#x6570;&#x7EC4;" class="headerlink" title="&#x8BBF;&#x95EE;&#x6570;&#x7EC4;"></a>&#x8BBF;&#x95EE;&#x6570;&#x7EC4;</h3><ul>
+<li>&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x5185;&#x90E8;&#x7684;&#x503C;</li>
 </ul>
-<p>通过 <code>[]</code>里面加上数字索引去访问，从0开始<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors[<span class="number">2</span>] ); <span class="comment">//'pink'</span></div></pre></td></tr></table></figure></p>
+<p>&#x901A;&#x8FC7; <code>[]</code>&#x91CC;&#x9762;&#x52A0;&#x4E0A;&#x6570;&#x5B57;&#x7D22;&#x5F15;&#x53BB;&#x8BBF;&#x95EE;&#xFF0C;&#x4ECE;0&#x5F00;&#x59CB;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="built_in">console</span>.log( colors[<span class="number">2</span>] ); <span class="comment">//&apos;pink&apos;</span></div></pre></td></tr></tbody></table></figure><p></p>
 <ul>
-<li>数组的长度</li>
+<li>&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.length ); <span class="comment">//3</span></div></pre></td></tr></table></figure>
-<p>数组长度是从1开始数的，所以最大长度比最大的索引会大1，这样也方便了直接在最后一位添加数据：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line">colors[ colors.length ] = <span class="string">'black'</span>;</div><div class="line"><span class="built_in">console</span>.log( colors ); <span class="comment">//['red','blue','pink','black'];</span></div></pre></td></tr></table></figure></p>
-<h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><p>检查一个变量是不是数组，方法有两种</p>
-<p>ES3中使用<code>instanceof</code>方法去判断，返回一个<code>boolear</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( list <span class="keyword">instanceof</span> <span class="built_in">Array</span> ); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
-<p>ES5后使用<code>Array.isArray()</code>方法去判断，返回一个<code>boolear</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>.isArray(list) ); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
-<p><strong>ES3中的方法会导致在不同执行环境下，创建的数组会有各自不同的够构造函数，在ES5中解决了</strong></p>
-<h2 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h2><p>将数组转成字符串：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.toString() );<span class="comment">//red,blue,pink</span></div><div class="line"><span class="built_in">console</span>.log( colors.toLocaleString() );<span class="comment">//red,blue,pink</span></div></pre></td></tr></table></figure></p>
-<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><p><code>toString()</code>和<code>toLocaleString()</code>方法都会将数组转成字符串，用逗号隔开，如果要选用自己喜欢的符号去隔开，那么要采用<code>join()</code>方法。方法会返回从组后的字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.join(<span class="string">'我'</span>) ); <span class="comment">//red我blue我pink</span></div></pre></td></tr></table></figure></p>
-<p><strong>可以是任意的字符串去隔开</strong></p>
-<h2 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h2><p>提供了<code>push()</code>和<code>pop()</code>方法，以便实现栈的行为。</p>
-<h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p><code>push()</code>方法可以接收任意数量的参数，把他们逐个添加到数组末尾，并返回修改后数组的长度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">'red'</span>,<span class="string">'blue'</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p><code>pop()</code>方法从数组末尾移除最后一项，减少数组的<code>length</code>值，然后返回移除的项。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> item = colors.pop();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// 'pink'</span></div><div class="line"><span class="built_in">console</span>.log( colors )<span class="comment">// ['red','blue']</span></div></pre></td></tr></table></figure></p>
-<h2 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h2><p>队列在列表的末端添加项，从列表的前端移除项。</p>
-<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>移除数组第一项，并返回第一项的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> item = colors.shift();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// 'red'</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['blue','pink']</span></div></pre></td></tr></table></figure></p>
-<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>它能在数组前端添加任意项，并返回长度<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> count = colors.unshift(<span class="string">'black'</span>,<span class="string">'white'</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['black','white','red','blue','pink']</span></div></pre></td></tr></table></figure></p>
-<p><strong>在IE7下面<code>unshift()</code>会总是返回undefined，IE8在非兼容模式下回返回正确长度</strong></p>
-<h2 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h2><p>数组中已经存在两个可以直接用的重排序的方法：<code>reverse()</code>和<code>sort()</code></p>
-<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>会将数组现在的顺序颠倒，然后返回重新排序后的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line">colors.reverse();</div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['pink','blue','red']</span></div></pre></td></tr></table></figure></p>
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>默认将数组数组转成字符串，然后从小到大进行排序，然后返回一个重新排序后的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>];</div><div class="line">values.sort();</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,10,15,5]</span></div></pre></td></tr></table></figure></p>
-<p>这样显然和想象中的不一样，因为上面是直接进行的字符串的比较，而不是数值类型的比较。可以给<code>sort()</code>传入一个方法，返回数值类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> a - b;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort(compare);</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,5,8,10,15]</span></div></pre></td></tr></table></figure>
-<p>从小到大是<code>return a - b</code>，从大到小是<code>return b - a</code></p>
-<p>其实我比较推荐ES6的箭头函数，更简洁<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort( <span class="function">(<span class="params">a,b</span>)=&gt;</span>a - b );</div></pre></td></tr></table></figure></p>
-<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p>js中对数组的操作还有很多方法</p>
-<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat</code>方法可以基于当前数组中的所有项创建一个新数组。此方法会创建一个副本，然后返回重组的新数组，并不会对原数组进行操作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">'black'</span>,[<span class="string">'white'</span>,<span class="string">'yellow'</span>]);</div><div class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//['red','blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log(colors2);<span class="comment">//['red','blue','pink','black','white','yellow']</span></div></pre></td></tr></table></figure></p>
-<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code>方法接收两个参数，第一个为必填：返回项的起始位置，第二个可选：结束位置。如果没有第二个参数，则默认从起始位置到结束。截取位置计算方法是<code>&gt;=起始位置,&lt;结束位置</code>。方法最后返回截取的这段数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log( colors2 );<span class="comment">//['blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log( colors3 );<span class="comment">//['blue']</span></div></pre></td></tr></table></figure></p>
-<p>如果传值为负数，那么就用数组的<code>length</code>加上它，作为参数来计算。如果结束位置小于起始位置，则返回空数组。</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.length ); <span class="comment">//3</span></div></pre></td></tr></tbody></table></figure>
+<p>&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x662F;&#x4ECE;1&#x5F00;&#x59CB;&#x6570;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x6BD4;&#x6700;&#x5927;&#x7684;&#x7D22;&#x5F15;&#x4F1A;&#x5927;1&#xFF0C;&#x8FD9;&#x6837;&#x4E5F;&#x65B9;&#x4FBF;&#x4E86;&#x76F4;&#x63A5;&#x5728;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#xFF1A;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line">colors[ colors.length ] = <span class="string">&apos;black&apos;</span>;</div><div class="line"><span class="built_in">console</span>.log( colors ); <span class="comment">//[&apos;red&apos;,&apos;blue&apos;,&apos;pink&apos;,&apos;black&apos;];</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x68C0;&#x6D4B;&#x6570;&#x7EC4;"><a href="#&#x68C0;&#x6D4B;&#x6570;&#x7EC4;" class="headerlink" title="&#x68C0;&#x6D4B;&#x6570;&#x7EC4;"></a>&#x68C0;&#x6D4B;&#x6570;&#x7EC4;</h2><p>&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x79CD;</p>
+<p>ES3&#x4E2D;&#x4F7F;&#x7528;<code>instanceof</code>&#x65B9;&#x6CD5;&#x53BB;&#x5224;&#x65AD;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>boolear</code><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( list <span class="keyword">instanceof</span> <span class="built_in">Array</span> ); <span class="comment">//true</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p>ES5&#x540E;&#x4F7F;&#x7528;<code>Array.isArray()</code>&#x65B9;&#x6CD5;&#x53BB;&#x5224;&#x65AD;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>boolear</code><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>.isArray(list) ); <span class="comment">//true</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>ES3&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x5BFC;&#x81F4;&#x5728;&#x4E0D;&#x540C;&#x6267;&#x884C;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;&#x7684;&#x6570;&#x7EC4;&#x4F1A;&#x6709;&#x5404;&#x81EA;&#x4E0D;&#x540C;&#x7684;&#x591F;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5728;ES5&#x4E2D;&#x89E3;&#x51B3;&#x4E86;</strong></p>
+<h2 id="&#x8F6C;&#x6362;&#x65B9;&#x6CD5;"><a href="#&#x8F6C;&#x6362;&#x65B9;&#x6CD5;" class="headerlink" title="&#x8F6C;&#x6362;&#x65B9;&#x6CD5;"></a>&#x8F6C;&#x6362;&#x65B9;&#x6CD5;</h2><p>&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.toString() );<span class="comment">//red,blue,pink</span></div><div class="line"><span class="built_in">console</span>.log( colors.toLocaleString() );<span class="comment">//red,blue,pink</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><p><code>toString()</code>&#x548C;<code>toLocaleString()</code>&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x9009;&#x7528;&#x81EA;&#x5DF1;&#x559C;&#x6B22;&#x7684;&#x7B26;&#x53F7;&#x53BB;&#x9694;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;&#x8981;&#x91C7;&#x7528;<code>join()</code>&#x65B9;&#x6CD5;&#x3002;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4ECE;&#x7EC4;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="built_in">console</span>.log( colors.join(<span class="string">&apos;&#x6211;&apos;</span>) ); <span class="comment">//red&#x6211;blue&#x6211;pink</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53BB;&#x9694;&#x5F00;</strong></p>
+<h2 id="&#x6808;&#x65B9;&#x6CD5;"><a href="#&#x6808;&#x65B9;&#x6CD5;" class="headerlink" title="&#x6808;&#x65B9;&#x6CD5;"></a>&#x6808;&#x65B9;&#x6CD5;</h2><p>&#x63D0;&#x4F9B;&#x4E86;<code>push()</code>&#x548C;<code>pop()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B9E;&#x73B0;&#x6808;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p><code>push()</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x628A;&#x4ED6;&#x4EEC;&#x9010;&#x4E2A;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x672B;&#x5C3E;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4FEE;&#x6539;&#x540E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x3002;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 2</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p><code>pop()</code>&#x65B9;&#x6CD5;&#x4ECE;&#x6570;&#x7EC4;&#x672B;&#x5C3E;&#x79FB;&#x9664;&#x6700;&#x540E;&#x4E00;&#x9879;&#xFF0C;&#x51CF;&#x5C11;&#x6570;&#x7EC4;&#x7684;<code>length</code>&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x79FB;&#x9664;&#x7684;&#x9879;&#x3002;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="keyword">var</span> item = colors.pop();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// &apos;pink&apos;</span></div><div class="line"><span class="built_in">console</span>.log( colors )<span class="comment">// [&apos;red&apos;,&apos;blue&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x961F;&#x5217;&#x65B9;&#x6CD5;"><a href="#&#x961F;&#x5217;&#x65B9;&#x6CD5;" class="headerlink" title="&#x961F;&#x5217;&#x65B9;&#x6CD5;"></a>&#x961F;&#x5217;&#x65B9;&#x6CD5;</h2><p>&#x961F;&#x5217;&#x5728;&#x5217;&#x8868;&#x7684;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x9879;&#xFF0C;&#x4ECE;&#x5217;&#x8868;&#x7684;&#x524D;&#x7AEF;&#x79FB;&#x9664;&#x9879;&#x3002;</p>
+<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>&#x79FB;&#x9664;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x9879;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x9879;&#x7684;&#x503C;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="keyword">var</span> item = colors.shift();</div><div class="line"><span class="built_in">console</span>.log( item );<span class="comment">// &apos;red&apos;</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;blue&apos;,&apos;pink&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>&#x5B83;&#x80FD;&#x5728;&#x6570;&#x7EC4;&#x524D;&#x7AEF;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x9879;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x957F;&#x5EA6;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="keyword">var</span> count = colors.unshift(<span class="string">&apos;black&apos;</span>,<span class="string">&apos;white&apos;</span>);</div><div class="line"><span class="built_in">console</span>.log( count );<span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;black&apos;,&apos;white&apos;,&apos;red&apos;,&apos;blue&apos;,&apos;pink&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>&#x5728;IE7&#x4E0B;&#x9762;<code>unshift()</code>&#x4F1A;&#x603B;&#x662F;&#x8FD4;&#x56DE;undefined&#xFF0C;IE8&#x5728;&#x975E;&#x517C;&#x5BB9;&#x6A21;&#x5F0F;&#x4E0B;&#x56DE;&#x8FD4;&#x56DE;&#x6B63;&#x786E;&#x957F;&#x5EA6;</strong></p>
+<h2 id="&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;"><a href="#&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;" class="headerlink" title="&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;"></a>&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;</h2><p>&#x6570;&#x7EC4;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x7684;&#x91CD;&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>reverse()</code>&#x548C;<code>sort()</code></p>
+<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>&#x4F1A;&#x5C06;&#x6570;&#x7EC4;&#x73B0;&#x5728;&#x7684;&#x987A;&#x5E8F;&#x98A0;&#x5012;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line">colors.reverse();</div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;pink&apos;,&apos;blue&apos;,&apos;red&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>&#x9ED8;&#x8BA4;&#x5C06;&#x6570;&#x7EC4;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>];</div><div class="line">values.sort();</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,10,15,5]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x8FD9;&#x6837;&#x663E;&#x7136;&#x548C;&#x60F3;&#x8C61;&#x4E2D;&#x7684;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0A;&#x9762;&#x662F;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6BD4;&#x8F83;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x6BD4;&#x8F83;&#x3002;&#x53EF;&#x4EE5;&#x7ED9;<code>sort()</code>&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x6570;&#x503C;&#x7C7B;&#x578B;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>{</div><div class="line">    <span class="keyword">return</span> a - b;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort(compare);</div><div class="line"><span class="built_in">console</span>.log( values );<span class="comment">//[0,1,5,8,10,15]</span></div></pre></td></tr></tbody></table></figure>
+<p>&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x662F;<code>return a - b</code>&#xFF0C;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x662F;<code>return b - a</code></p>
+<p>&#x5176;&#x5B9E;&#x6211;&#x6BD4;&#x8F83;&#x63A8;&#x8350;ES6&#x7684;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x66F4;&#x7B80;&#x6D01;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">values.sort( <span class="function">(<span class="params">a,b</span>)=&gt;</span>a - b );</div></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;"><a href="#&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;" class="headerlink" title="&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;"></a>&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;</h2><p>js&#x4E2D;&#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x64CD;&#x4F5C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x65B9;&#x6CD5;</p>
+<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x9879;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x91CD;&#x7EC4;&#x7684;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x539F;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">&apos;black&apos;</span>,[<span class="string">&apos;white&apos;</span>,<span class="string">&apos;yellow&apos;</span>]);</div><div class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//[&apos;red&apos;,&apos;blue&apos;,&apos;pink&apos;]</span></div><div class="line"><span class="built_in">console</span>.log(colors2);<span class="comment">//[&apos;red&apos;,&apos;blue&apos;,&apos;pink&apos;,&apos;black&apos;,&apos;white&apos;,&apos;yellow&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code>&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x4E3A;&#x5FC5;&#x586B;&#xFF1A;&#x8FD4;&#x56DE;&#x9879;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#xFF1A;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5230;&#x7ED3;&#x675F;&#x3002;&#x622A;&#x53D6;&#x4F4D;&#x7F6E;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x662F;<code>&gt;=&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;,&lt;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;</code>&#x3002;&#x65B9;&#x6CD5;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x622A;&#x53D6;&#x7684;&#x8FD9;&#x6BB5;&#x6570;&#x7EC4;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>];</div><div class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log( colors2 );<span class="comment">//[&apos;blue&apos;,&apos;pink&apos;]</span></div><div class="line"><span class="built_in">console</span>.log( colors3 );<span class="comment">//[&apos;blue&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x5982;&#x679C;&#x4F20;&#x503C;&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7528;&#x6570;&#x7EC4;&#x7684;<code>length</code>&#x52A0;&#x4E0A;&#x5B83;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6765;&#x8BA1;&#x7B97;&#x3002;&#x5982;&#x679C;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x6570;&#x7EC4;&#x3002;</p>
 <h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><ul>
-<li>有3种用法<ol>
-<li>删除：<ul>
-<li>指定两个参数，第一个参数：删除的起始位置，第二个参数：要删除的项数。如<code>splice(0,2)</code>会删除前面2项。</li>
+<li>&#x6709;3&#x79CD;&#x7528;&#x6CD5;<ol>
+<li>&#x5220;&#x9664;&#xFF1A;<ul>
+<li>&#x6307;&#x5B9A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5220;&#x9664;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x5220;&#x9664;&#x7684;&#x9879;&#x6570;&#x3002;&#x5982;<code>splice(0,2)</code>&#x4F1A;&#x5220;&#x9664;&#x524D;&#x9762;2&#x9879;&#x3002;</li>
 </ul>
 </li>
-<li>插入：<ul>
-<li>可以指定位置插入任意数量的项，指定三个参数，第一个参数：起始位置，第二个参数：0（删除0项），第三个参数：插入的内容。可以插入多项，比如<code>splice(1,0,&#39;hello&#39;,&#39;world&#39;)</code>从索引为1的地方开始插入’hello’和’world’。</li>
+<li>&#x63D2;&#x5165;&#xFF1A;<ul>
+<li>&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x9879;&#xFF0C;&#x6307;&#x5B9A;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;0&#xFF08;&#x5220;&#x9664;0&#x9879;&#xFF09;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x63D2;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x591A;&#x9879;&#xFF0C;&#x6BD4;&#x5982;<code>splice(1,0,&apos;hello&apos;,&apos;world&apos;)</code>&#x4ECE;&#x7D22;&#x5F15;&#x4E3A;1&#x7684;&#x5730;&#x65B9;&#x5F00;&#x59CB;&#x63D2;&#x5165;&#x2019;hello&#x2019;&#x548C;&#x2019;world&#x2019;&#x3002;</li>
 </ul>
 </li>
-<li>替换：<ul>
-<li>结合前面两条可以得到此项，比如从起始位置删除2条，再加入2条，就成了替换了<code>splice(1,2,&#39;hello&#39;,&#39;world&#39;)</code></li>
+<li>&#x66FF;&#x6362;&#xFF1A;<ul>
+<li>&#x7ED3;&#x5408;&#x524D;&#x9762;&#x4E24;&#x6761;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6B64;&#x9879;&#xFF0C;&#x6BD4;&#x5982;&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5220;&#x9664;2&#x6761;&#xFF0C;&#x518D;&#x52A0;&#x5165;2&#x6761;&#xFF0C;&#x5C31;&#x6210;&#x4E86;&#x66FF;&#x6362;&#x4E86;<code>splice(1,2,&apos;hello&apos;,&apos;world&apos;)</code></li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
-<p><code>splice()</code>会返回删除的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'pink'</span>,<span class="string">'black'</span>,<span class="string">'white'</span>];</div><div class="line"><span class="keyword">var</span> removed1 = colors.splice(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">//['blue','pink']</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['red','black','white']</span></div><div class="line"><span class="keyword">var</span> removed2 = colors.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="string">'hello'</span>);<span class="comment">//[]</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['hello','red','black','white']</span></div><div class="line"><span class="keyword">var</span> removed3 = colors.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">'world'</span>);<span class="comment">//['red']</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//['hello','world','black','white']</span></div></pre></td></tr></table></figure></p>
-<h2 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h2><p>ES5为数组实例添加了两个位置方法：<code>indexOf()</code>和<code>lastIndexOf()</code>。这两个方法接收两个参数：要查找的项和（可选的）表示查找位置起点的索引。</p>
-<p><strong>在没有找到的情况下会返回<code>-1</code>，在比较参数的时候会使用<code>全等</code>，也就是用<code>===</code>进行比较</strong></p>
-<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p>重数组开头查找，然后返回查找到的第一个字符在数组中的位置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>) );<span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">'liu'</span> &#125;;</div><div class="line"><span class="keyword">var</span> people = [&#123; <span class="attr">name</span>: <span class="string">'liu'</span> &#125;];</div><div class="line"></div><div class="line"><span class="keyword">var</span> morePeople = [person];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( people.indexOf(person) );<span class="comment">//-1</span></div><div class="line"><span class="built_in">console</span>.log( morePeople.indexOf(person) )<span class="comment">//0</span></div></pre></td></tr></table></figure>
-<h2 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h2><ul>
-<li><p>ES5数组定义了5个迭代方法：</p>
+<p><code>splice()</code>&#x4F1A;&#x8FD4;&#x56DE;&#x5220;&#x9664;&#x7684;&#x6570;&#x7EC4;<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">&apos;red&apos;</span>,<span class="string">&apos;blue&apos;</span>,<span class="string">&apos;pink&apos;</span>,<span class="string">&apos;black&apos;</span>,<span class="string">&apos;white&apos;</span>];</div><div class="line"><span class="keyword">var</span> removed1 = colors.splice(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">//[&apos;blue&apos;,&apos;pink&apos;]</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;red&apos;,&apos;black&apos;,&apos;white&apos;]</span></div><div class="line"><span class="keyword">var</span> removed2 = colors.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="string">&apos;hello&apos;</span>);<span class="comment">//[]</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;hello&apos;,&apos;red&apos;,&apos;black&apos;,&apos;white&apos;]</span></div><div class="line"><span class="keyword">var</span> removed3 = colors.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">&apos;world&apos;</span>);<span class="comment">//[&apos;red&apos;]</span></div><div class="line"><span class="built_in">console</span>.log( colors );<span class="comment">//[&apos;hello&apos;,&apos;world&apos;,&apos;black&apos;,&apos;white&apos;]</span></div></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;"><a href="#&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;" class="headerlink" title="&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;"></a>&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;</h2><p>ES5&#x4E3A;&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#x6DFB;&#x52A0;&#x4E86;&#x4E24;&#x4E2A;&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;&#xFF1A;<code>indexOf()</code>&#x548C;<code>lastIndexOf()</code>&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x67E5;&#x627E;&#x7684;&#x9879;&#x548C;&#xFF08;&#x53EF;&#x9009;&#x7684;&#xFF09;&#x8868;&#x793A;&#x67E5;&#x627E;&#x4F4D;&#x7F6E;&#x8D77;&#x70B9;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p><strong>&#x5728;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8FD4;&#x56DE;<code>-1</code>&#xFF0C;&#x5728;&#x6BD4;&#x8F83;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x4F7F;&#x7528;<code>&#x5168;&#x7B49;</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7528;<code>===</code>&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</strong></p>
+<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p>&#x91CD;&#x6570;&#x7EC4;&#x5F00;&#x5934;&#x67E5;&#x627E;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x67E5;&#x627E;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>) );<span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( numbers.indexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log( numbers.lastIndexOf(<span class="number">4</span>,<span class="number">4</span>) )<span class="comment">//3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> person = { <span class="attr">name</span>: <span class="string">&apos;liu&apos;</span> };</div><div class="line"><span class="keyword">var</span> people = [{ <span class="attr">name</span>: <span class="string">&apos;liu&apos;</span> }];</div><div class="line"></div><div class="line"><span class="keyword">var</span> morePeople = [person];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log( people.indexOf(person) );<span class="comment">//-1</span></div><div class="line"><span class="built_in">console</span>.log( morePeople.indexOf(person) )<span class="comment">//0</span></div></pre></td></tr></tbody></table></figure>
+<h2 id="&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;"><a href="#&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;" class="headerlink" title="&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;"></a>&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;</h2><ul>
+<li><p>ES5&#x6570;&#x7EC4;&#x5B9A;&#x4E49;&#x4E86;5&#x4E2A;&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;&#xFF1A;</p>
 <ul>
 <li>every()</li>
 <li>filter()</li>
@@ -416,44 +408,44 @@
 <li>some()</li>
 </ul>
 </li>
-<li><p>这些方法会接收3个参数：</p>
+<li><p>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4F1A;&#x63A5;&#x6536;3&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
 <ol>
-<li>数组的值</li>
-<li>该项在数组中的位置</li>
-<li>数组对象本身</li>
+<li>&#x6570;&#x7EC4;&#x7684;&#x503C;</li>
+<li>&#x8BE5;&#x9879;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;</li>
 </ol>
 </li>
 </ul>
-<h3 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h3><p>对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> everyResult = numbers.every( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( everyResult );<span class="comment">//false</span></div></pre></td></tr></table></figure>
-<h3 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h3><p>对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> someResult = numbers.some( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (itme &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(someResult);<span class="comment">//</span></div></pre></td></tr></table></figure>
-<p><strong><code>some()</code>和<code>every()</code>比较像，一个是有一项返回true则返回true，一个必须所有都为true，则返回true</strong></p>
-<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><p>对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> ( item &gt; <span class="number">2</span>);</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[3,4,5,4,3]</span></div></pre></td></tr></table></figure>
-<p><strong>这个方法对查询符合某些条件的所有数组项非常有用</strong></p>
-<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><p>对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span>  item * <span class="number">2</span>;</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[2,4,6,8,10,8,6,4,2]</span></div></pre></td></tr></table></figure>
-<p><strong>这个方法适合创建包含的项与另一个数组一一对应的数组</strong></p>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><p>对数组中的每一项运行给定函数，这个方法没有返回值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line">numbers.forEach( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>)</span>&#123;</div><div class="line">    <span class="comment">//执行操作</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p><strong>支队数组中的每项运行传入的函数，和<code>for</code>类似</strong></p>
-<h2 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h2><p>ES5新增的两个归并方法：<code>reduce()</code>和<code>reduceRight()</code>。这两个方法都会迭代数组的所有项，然后构建一个最终返回的值。</p>
-<p><code>reduce()</code>是从第一项开始操作，而<code>reduceRight()</code>是从最后一项开始操作。</p>
+<h3 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h3><p>&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x51FD;&#x6570;&#x5BF9;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x8FD4;&#x56DE;true&#xFF0C;&#x5219;&#x8FD4;&#x56DE;true</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> everyResult = numbers.every( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>{</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log( everyResult );<span class="comment">//false</span></div></pre></td></tr></tbody></table></figure>
+<h3 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h3><p>&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x51FD;&#x6570;&#x5BF9;&#x4EFB;&#x4E00;&#x9879;&#x8FD4;&#x56DE;true&#xFF0C;&#x5219;&#x8FD4;&#x56DE;true</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> someResult = numbers.some( <span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>{</div><div class="line">    <span class="keyword">return</span> (itme &gt; <span class="number">2</span>);</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log(someResult);<span class="comment">//</span></div></pre></td></tr></tbody></table></figure>
+<p><strong><code>some()</code>&#x548C;<code>every()</code>&#x6BD4;&#x8F83;&#x50CF;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6709;&#x4E00;&#x9879;&#x8FD4;&#x56DE;true&#x5219;&#x8FD4;&#x56DE;true&#xFF0C;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x6240;&#x6709;&#x90FD;&#x4E3A;true&#xFF0C;&#x5219;&#x8FD4;&#x56DE;true</strong></p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><p>&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;true&#x7684;&#x9879;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>{</div><div class="line">    <span class="keyword">return</span> ( item &gt; <span class="number">2</span>);</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[3,4,5,4,3]</span></div></pre></td></tr></tbody></table></figure>
+<p><strong>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5BF9;&#x67E5;&#x8BE2;&#x7B26;&#x5408;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x9879;&#x975E;&#x5E38;&#x6709;&#x7528;</strong></p>
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><p>&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x6BCF;&#x6B21;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x679C;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>) </span>{</div><div class="line">    <span class="keyword">return</span>  item * <span class="number">2</span>;</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log( filterResult);<span class="comment">//[2,4,6,8,10,8,6,4,2]</span></div></pre></td></tr></tbody></table></figure>
+<p><strong>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9002;&#x5408;&#x521B;&#x5EFA;&#x5305;&#x542B;&#x7684;&#x9879;&#x4E0E;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x7EC4;</strong></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><p>&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line">numbers.forEach( <span class="function"><span class="keyword">function</span>(<span class="params"> item, index, array</span>)</span>{</div><div class="line">    <span class="comment">//&#x6267;&#x884C;&#x64CD;&#x4F5C;</span></div><div class="line">})</div></pre></td></tr></tbody></table></figure>
+<p><strong>&#x652F;&#x961F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x9879;&#x8FD0;&#x884C;&#x4F20;&#x5165;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x548C;<code>for</code>&#x7C7B;&#x4F3C;</strong></p>
+<h2 id="&#x5F52;&#x5E76;&#x65B9;&#x6CD5;"><a href="#&#x5F52;&#x5E76;&#x65B9;&#x6CD5;" class="headerlink" title="&#x5F52;&#x5E76;&#x65B9;&#x6CD5;"></a>&#x5F52;&#x5E76;&#x65B9;&#x6CD5;</h2><p>ES5&#x65B0;&#x589E;&#x7684;&#x4E24;&#x4E2A;&#x5F52;&#x5E76;&#x65B9;&#x6CD5;&#xFF1A;<code>reduce()</code>&#x548C;<code>reduceRight()</code>&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x3002;</p>
+<p><code>reduce()</code>&#x662F;&#x4ECE;&#x7B2C;&#x4E00;&#x9879;&#x5F00;&#x59CB;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;<code>reduceRight()</code>&#x662F;&#x4ECE;&#x6700;&#x540E;&#x4E00;&#x9879;&#x5F00;&#x59CB;&#x64CD;&#x4F5C;&#x3002;</p>
 <ul>
-<li>他们的函数会接收4个参数：<ol>
-<li>前一个值</li>
-<li>当前值</li>
-<li>项的索引</li>
-<li>数组对象</li>
+<li>&#x4ED6;&#x4EEC;&#x7684;&#x51FD;&#x6570;&#x4F1A;&#x63A5;&#x6536;4&#x4E2A;&#x53C2;&#x6570;&#xFF1A;<ol>
+<li>&#x524D;&#x4E00;&#x4E2A;&#x503C;</li>
+<li>&#x5F53;&#x524D;&#x503C;</li>
+<li>&#x9879;&#x7684;&#x7D22;&#x5F15;</li>
+<li>&#x6570;&#x7EC4;&#x5BF9;&#x8C61;</li>
 </ol>
 </li>
 </ul>
-<p>这个函数返回的任何值都会作为第一个参数自动传给下一项</p>
-<p><strong>第一次运算会从第二项开始，第一项的值会作为<code>前一个值</code>来运算</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> number = <span class="number">0</span>;</div><div class="line"><span class="keyword">var</span> sum = values.reduce( <span class="function"><span class="keyword">function</span>(<span class="params"> prev, cur, index, array</span>)</span>&#123;</div><div class="line">    number++;</div><div class="line">    <span class="keyword">return</span> prev + cur</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(sum);<span class="comment">//15</span></div><div class="line"><span class="built_in">console</span>.log(number);<span class="comment">//4</span></div></pre></td></tr></table></figure>
-<p><strong>number最后值为4，比数组的length少1</strong></p>
-
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x4EFB;&#x4F55;&#x503C;&#x90FD;&#x4F1A;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x81EA;&#x52A8;&#x4F20;&#x7ED9;&#x4E0B;&#x4E00;&#x9879;</p>
+<p><strong>&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x7B97;&#x4F1A;&#x4ECE;&#x7B2C;&#x4E8C;&#x9879;&#x5F00;&#x59CB;&#xFF0C;&#x7B2C;&#x4E00;&#x9879;&#x7684;&#x503C;&#x4F1A;&#x4F5C;&#x4E3A;<code>&#x524D;&#x4E00;&#x4E2A;&#x503C;</code>&#x6765;&#x8FD0;&#x7B97;</strong></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> number = <span class="number">0</span>;</div><div class="line"><span class="keyword">var</span> sum = values.reduce( <span class="function"><span class="keyword">function</span>(<span class="params"> prev, cur, index, array</span>)</span>{</div><div class="line">    number++;</div><div class="line">    <span class="keyword">return</span> prev + cur</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log(sum);<span class="comment">//15</span></div><div class="line"><span class="built_in">console</span>.log(number);<span class="comment">//4</span></div></pre></td></tr></tbody></table></figure>
+<p><strong>number&#x6700;&#x540E;&#x503C;&#x4E3A;4&#xFF0C;&#x6BD4;&#x6570;&#x7EC4;&#x7684;length&#x5C11;1</strong></p>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script>
       
     </div>
     
@@ -465,23 +457,23 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>我，曼妥思，打钱</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
+  <div>&#x6211;&#xFF0C;&#x66FC;&#x59A5;&#x601D;&#xFF0C;&#x6253;&#x94B1;</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&apos;QR&apos;); if (qr.style.display === &apos;none&apos;) {qr.style.display=&apos;block&apos;;} else {qr.style.display=&apos;none&apos;}">
+    <span>&#x6253;&#x8D4F;</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="曼妥思 微信支付"/>
-        <p>微信支付</p>
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x5FAE;&#x4FE1;&#x652F;&#x4ED8;">
+        <p>&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="曼妥思 支付宝"/>
-        <p>支付宝</p>
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x652F;&#x4ED8;&#x5B9D;">
+        <p>&#x652F;&#x4ED8;&#x5B9D;</p>
       </div>
     
 
@@ -512,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/25/2017.9.25-Node-js查询数据库进行分页和排序/" rel="next" title="Node.js查询数据库进行分页和排序">
-                <i class="fa fa-chevron-left"></i> Node.js查询数据库进行分页和排序
+              <a href="/2017/09/25/2017.9.27-flex&#x7684;&#x6574;&#x7406;/" rel="next" title="flex&#x7684;&#x6574;&#x7406;">
+                <i class="fa fa-chevron-left"></i> flex&#x7684;&#x6574;&#x7406;
               </a>
             
           </div>
@@ -522,8 +514,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/06/2017.10.6-github没贡献/" rel="prev" title="github贡献不增长">
-                github贡献不增长 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/06/2017.10.6-github&#x6CA1;&#x8D21;&#x732E;/" rel="prev" title="github&#x8D21;&#x732E;&#x4E0D;&#x589E;&#x957F;">
+                github&#x8D21;&#x732E;&#x4E0D;&#x589E;&#x957F; <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -577,24 +569,22 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            &#x6587;&#x7AE0;&#x76EE;&#x5F55;
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            &#x7AD9;&#x70B9;&#x6982;&#x89C8;
           </li>
         </ul>
       
 
       <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           
-            <img class="site-author-image" itemprop="image"
-              src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg"
-              alt="曼妥思" />
+            <img class="site-author-image" itemprop="image" src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg" alt="&#x66FC;&#x59A5;&#x601D;">
           
-            <p class="site-author-name" itemprop="name">曼妥思</p>
-            <p class="site-description motion-element" itemprop="description">记载一点自己的学习笔记</p>
+            <p class="site-author-name" itemprop="name">&#x66FC;&#x59A5;&#x601D;</p>
+            <p class="site-description motion-element" itemprop="description">&#x8BB0;&#x8F7D;&#x4E00;&#x70B9;&#x81EA;&#x5DF1;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</p>
         </div>
 
         <nav class="site-state motion-element">
@@ -605,7 +595,7 @@
               <a href="/archives/">
             
                 <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">日志</span>
+                <span class="site-state-item-name">&#x65E5;&#x5FD7;</span>
               </a>
             </div>
           
@@ -616,7 +606,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-name">&#x5206;&#x7C7B;</span>
               </a>
             </div>
           
@@ -627,7 +617,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">标签</span>
+                <span class="site-state-item-name">&#x6807;&#x7B7E;</span>
               </a>
             </div>
           
@@ -673,11 +663,11 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="苏天天~" target="_blank">苏天天~</a>
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="&#x82CF;&#x5929;&#x5929;~" target="_blank">&#x82CF;&#x5929;&#x5929;~</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://caraws.github.io/" title="小珊珊" target="_blank">小珊珊</a>
+                  <a href="https://caraws.github.io/" title="&#x5C0F;&#x73CA;&#x73CA;" target="_blank">&#x5C0F;&#x73CA;&#x73CA;</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -703,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Array"><span class="nav-number">1.</span> <span class="nav-text">关于Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个数组"><span class="nav-number">1.1.</span> <span class="nav-text">创建一个数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问数组"><span class="nav-number">1.2.</span> <span class="nav-text">访问数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测数组"><span class="nav-number">2.</span> <span class="nav-text">检测数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换方法"><span class="nav-number">3.</span> <span class="nav-text">转换方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-number">3.1.</span> <span class="nav-text">join()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈方法"><span class="nav-number">4.</span> <span class="nav-text">栈方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-number">4.1.</span> <span class="nav-text">push()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-number">4.2.</span> <span class="nav-text">pop()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列方法"><span class="nav-number">5.</span> <span class="nav-text">队列方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-number">5.1.</span> <span class="nav-text">shift()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-number">5.2.</span> <span class="nav-text">unshift()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重排序方法"><span class="nav-number">6.</span> <span class="nav-text">重排序方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-number">6.1.</span> <span class="nav-text">reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.2.</span> <span class="nav-text">sort()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作方法"><span class="nav-number">7.</span> <span class="nav-text">操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-number">7.1.</span> <span class="nav-text">concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-number">7.2.</span> <span class="nav-text">slice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-number">7.3.</span> <span class="nav-text">splice()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置方法"><span class="nav-number">8.</span> <span class="nav-text">位置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf"><span class="nav-number">8.1.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代方法"><span class="nav-number">9.</span> <span class="nav-text">迭代方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#every"><span class="nav-number">9.1.</span> <span class="nav-text">every()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some"><span class="nav-number">9.2.</span> <span class="nav-text">some()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">9.3.</span> <span class="nav-text">filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">9.4.</span> <span class="nav-text">map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-number">9.5.</span> <span class="nav-text">forEach()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并方法"><span class="nav-number">10.</span> <span class="nav-text">归并方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5173;&#x4E8E;Array"><span class="nav-number">1.</span> <span class="nav-text">&#x5173;&#x4E8E;Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;"><span class="nav-number">1.1.</span> <span class="nav-text">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#&#x8BBF;&#x95EE;&#x6570;&#x7EC4;"><span class="nav-number">1.2.</span> <span class="nav-text">&#x8BBF;&#x95EE;&#x6570;&#x7EC4;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x68C0;&#x6D4B;&#x6570;&#x7EC4;"><span class="nav-number">2.</span> <span class="nav-text">&#x68C0;&#x6D4B;&#x6570;&#x7EC4;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x8F6C;&#x6362;&#x65B9;&#x6CD5;"><span class="nav-number">3.</span> <span class="nav-text">&#x8F6C;&#x6362;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-number">3.1.</span> <span class="nav-text">join()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x6808;&#x65B9;&#x6CD5;"><span class="nav-number">4.</span> <span class="nav-text">&#x6808;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-number">4.1.</span> <span class="nav-text">push()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-number">4.2.</span> <span class="nav-text">pop()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x961F;&#x5217;&#x65B9;&#x6CD5;"><span class="nav-number">5.</span> <span class="nav-text">&#x961F;&#x5217;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-number">5.1.</span> <span class="nav-text">shift()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-number">5.2.</span> <span class="nav-text">unshift()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;"><span class="nav-number">6.</span> <span class="nav-text">&#x91CD;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-number">6.1.</span> <span class="nav-text">reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.2.</span> <span class="nav-text">sort()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;"><span class="nav-number">7.</span> <span class="nav-text">&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-number">7.1.</span> <span class="nav-text">concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-number">7.2.</span> <span class="nav-text">slice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-number">7.3.</span> <span class="nav-text">splice()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;"><span class="nav-number">8.</span> <span class="nav-text">&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf"><span class="nav-number">8.1.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;"><span class="nav-number">9.</span> <span class="nav-text">&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#every"><span class="nav-number">9.1.</span> <span class="nav-text">every()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some"><span class="nav-number">9.2.</span> <span class="nav-text">some()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">9.3.</span> <span class="nav-text">filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">9.4.</span> <span class="nav-text">map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-number">9.5.</span> <span class="nav-text">forEach()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5F52;&#x5E76;&#x65B9;&#x6CD5;"><span class="nav-number">10.</span> <span class="nav-text">&#x5F52;&#x5E76;&#x65B9;&#x6CD5;</span></a></li></ol></div>
             
 
           </div>
@@ -723,24 +713,24 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
-  &copy; 
+  &#xA9; 
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">曼妥思</span>
+  <span class="author" itemprop="copyrightHolder">&#x66FC;&#x59A5;&#x601D;</span>
 
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">&#x7531; <a class="theme-link" href="https://hexo.io">Hexo</a> &#x5F3A;&#x529B;&#x9A71;&#x52A8;</div>
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+  <div class="theme-info">&#x4E3B;&#x9898; &#x2014; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 
         
@@ -904,5 +894,6 @@
 
   
 
-</body>
-</html>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script></body></html>
