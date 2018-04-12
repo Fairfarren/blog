@@ -1,0 +1,822 @@
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="JavaScript,weChat,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="&amp;#x4E0A;&amp;#x4E00;&amp;#x7BC7;&amp;#x5FAE;&amp;#x4FE1;&amp;#x5C0F;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x4E00;&amp;#x6B65;&amp;#x4E00;&amp;#x6B65;&amp;#x8D70;&amp;#xFF08;&amp;#x4E00;&amp;#xFF09; &amp;#x770B;&amp;#x6587;&amp;#x6863;&amp;#x4ECB;&amp;#x7ECD;&amp;#x4E86;&amp;#x90A3;&amp;#x4E48">
+<meta name="keywords" content="JavaScript,weChat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;">
+<meta property="og:url" content="https://fairfarren.github.io/2018/04/12/2018-4.12-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;/index.html">
+<meta property="og:site_name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
+<meta property="og:description" content="&amp;#x4E0A;&amp;#x4E00;&amp;#x7BC7;&amp;#x5FAE;&amp;#x4FE1;&amp;#x5C0F;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x4E00;&amp;#x6B65;&amp;#x4E00;&amp;#x6B65;&amp;#x8D70;&amp;#xFF08;&amp;#x4E00;&amp;#xFF09; &amp;#x770B;&amp;#x6587;&amp;#x6863;&amp;#x4ECB;&amp;#x7ECD;&amp;#x4E86;&amp;#x90A3;&amp;#x4E48">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf2aa161faa.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf2b6fcc392.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf521766640.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf7c9f027a0.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf7dae8ac4d.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/12/5acf7eb9748e4.png">
+<meta property="og:updated_time" content="2018-04-12T15:46:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;">
+<meta name="twitter:description" content="&amp;#x4E0A;&amp;#x4E00;&amp;#x7BC7;&amp;#x5FAE;&amp;#x4FE1;&amp;#x5C0F;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x4E00;&amp;#x6B65;&amp;#x4E00;&amp;#x6B65;&amp;#x8D70;&amp;#xFF08;&amp;#x4E00;&amp;#xFF09; &amp;#x770B;&amp;#x6587;&amp;#x6863;&amp;#x4ECB;&amp;#x7ECD;&amp;#x4E86;&amp;#x90A3;&amp;#x4E48">
+<meta name="twitter:image" content="https://i.loli.net/2018/04/12/5acf2aa161faa.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2018/04/12/2018-4.12-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;/">
+
+
+
+
+
+  <title>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09; | &#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">&#x4F60;&#x597D;&#xFF0C;&#x6211;&#x53EB;&#x66FC;&#x59A5;&#x601D;,&#x771F;&#x7684;&#x5F88;&#x66FC;&#x59A5;&#x601D;&#x7684;&#x66FC;&#x59A5;&#x601D;</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            &#x9996;&#x9875;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            &#x6807;&#x7B7E;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            &#x5206;&#x7C7B;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            &#x5F52;&#x6863;
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2018/04/12/2018-4.12-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E8C;&#xFF09;</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">&#x53D1;&#x8868;&#x4E8E;</span>
+              
+              <time title="&#x521B;&#x5EFA;&#x4E8E;" itemprop="dateCreated datePublished" datetime="2018-04-12T17:11:38+08:00">
+                2018-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">&#x5206;&#x7C7B;&#x4E8E;</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/&#x597D;&#x597D;&#x5B66;&#x4E60;&#x5929;&#x5929;&#x5411;&#x4E0A;/" itemprop="url" rel="index">
+                    <span itemprop="name">&#x597D;&#x597D;&#x5B66;&#x4E60;&#x5929;&#x5929;&#x5411;&#x4E0A;</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#x4E0A;&#x4E00;&#x7BC7;<a href="/2018/04/12/2018.4.12-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E00;&#xFF09;/">&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E00;&#xFF09;</a></p>
+<p>&#x770B;&#x6587;&#x6863;&#x4ECB;&#x7ECD;&#x4E86;&#x90A3;&#x4E48;&#x591A;&#xFF0C;&#x6700;&#x7EC8;&#x8FD8;&#x662F;&#x8981;&#x843D;&#x5B9E;&#x5230;&#x5B9E;&#x6218;&#x4E0A;&#x9762;&#x3002;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x51C6;&#x5907;&#x5199;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x51FA;&#x6765;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8E29;&#x7740;&#x5751;&#x624D;&#x6709;&#x610F;&#x601D;</p>
+<h1 id="&#x5BFC;&#x822A;"><a href="#&#x5BFC;&#x822A;" class="headerlink" title="&#x5BFC;&#x822A;"></a>&#x5BFC;&#x822A;</h1><p>&#x6211;&#x9009;&#x7528;&#x5BFC;&#x822A;&#x680F;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x90A3;&#x79CD;&#xFF0C;&#x67E5;&#x770B;<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html" target="_blank" rel="noopener">&#x6587;&#x6863;</a>&#x540E;&#x53D1;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;<code>app.json</code>&#x91CC;&#x9762;&#x914D;&#x7F6E;</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;pages&quot;</span>: [</div><div class="line">    <span class="string">&quot;pages/index/index&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/logs/logs&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/show/show&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/mine/mine&quot;</span></div><div class="line">  ],</div><div class="line">  <span class="attr">&quot;window&quot;</span>: {</div><div class="line">    <span class="attr">&quot;backgroundTextStyle&quot;</span>: <span class="string">&quot;light&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarBackgroundColor&quot;</span>: <span class="string">&quot;#32C6FF&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarTitleText&quot;</span>: <span class="string">&quot;Run-Mentos&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarTextStyle&quot;</span>: <span class="string">&quot;#fff&quot;</span></div><div class="line">  },</div><div class="line">  <span class="attr">&quot;tabBar&quot;</span>: {</div><div class="line">    <span class="attr">&quot;list&quot;</span>: [</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/index/index&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x9996;&#x9875;&quot;</span></div><div class="line">      },</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/show/show&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x52A8;&#x6001;&quot;</span></div><div class="line">      },</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/mine/mine&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x6211;&#x7684;&quot;</span></div><div class="line">      }</div><div class="line">    ]</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p><em>&#x6211;&#x5728;&#x8FD9;&#x4E00;&#x6B65;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x5148;&#x65B0;&#x5EFA;&#x4E86;&#x4E24;&#x4E2A;&#x9875;&#x9762;</em></p>
+<p><img src="https://i.loli.net/2018/04/12/5acf2aa161faa.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 17.44.48.png"></p>
+<p>&#x5176;&#x4E2D;<code>tabBar</code>&#x5C5E;&#x6027;&#x5C31;&#x662F;&#x5BFC;&#x822A;&#x680F;&#x7684;&#x914D;&#x7F6E;</p>
+<blockquote>
+<p>list: [ ] &#x8FD9;&#x91CC;&#x9762;&#x88C5;&#x7684;&#x5C31;&#x662F;&#x5BFC;&#x822A;&#xFF0C;&#x6700;&#x5C11;2&#x4E2A;&#xFF0C;&#x6700;&#x591A;5&#x4E2A;</p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/04/12/5acf2b6fcc392.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 17.48.14.png"><br>&#x6839;&#x636E;&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;api&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x6539;&#x53D8;&#x4E00;&#x4E0B;&#x5B57;&#x4F53;&#x989C;&#x8272;&#xFF0C;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x9009;&#x4E2D;&#x989C;&#x8272;&#xFF0C;&#x518D;&#x6DFB;&#x52A0;&#x4E0A;&#x56FE;&#x7247;</p>
+<p>&#x6211;&#x5728;&#x7F51;&#x4E0A;&#x53BB;&#x627E;&#x4E86;&#x4E00;&#x4E9B;&#x56FE;&#x6807;&#xFF0C;&#x6DFB;&#x52A0;&#x8FDB;&#x4E86;&#x9879;&#x76EE;&#x91CC;&#x9762;</p>
+<p><img src="https://i.loli.net/2018/04/12/5acf521766640.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 20.33.07.png"></p>
+<p>&#x6700;&#x540E;&#x7684;<code>app.json</code>&#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;pages&quot;</span>: [</div><div class="line">    <span class="string">&quot;pages/index/index&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/logs/logs&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/show/show&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/mine/mine&quot;</span>,</div><div class="line">    <span class="string">&quot;pages/activity/activity&quot;</span></div><div class="line">  ],</div><div class="line">  <span class="attr">&quot;window&quot;</span>: {</div><div class="line">    <span class="attr">&quot;backgroundTextStyle&quot;</span>: <span class="string">&quot;light&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarBackgroundColor&quot;</span>: <span class="string">&quot;#32C6FF&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarTitleText&quot;</span>: <span class="string">&quot;Run-Mentos&quot;</span>,</div><div class="line">    <span class="attr">&quot;navigationBarTextStyle&quot;</span>: <span class="string">&quot;#fff&quot;</span></div><div class="line">  },</div><div class="line">  <span class="attr">&quot;tabBar&quot;</span>: {</div><div class="line">    <span class="attr">&quot;list&quot;</span>: [</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/index/index&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x9996;&#x9875;&quot;</span>,</div><div class="line">        <span class="attr">&quot;iconPath&quot;</span>: <span class="string">&quot;states/images/home(1).png&quot;</span>,</div><div class="line">        <span class="attr">&quot;selectedIconPath&quot;</span>: <span class="string">&quot;states/images/home.png&quot;</span></div><div class="line">      },</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/show/show&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x52A8;&#x6001;&quot;</span>,</div><div class="line">        <span class="attr">&quot;iconPath&quot;</span>: <span class="string">&quot;states/images/iconfont-shumajiadian.png&quot;</span>,</div><div class="line">        <span class="attr">&quot;selectedIconPath&quot;</span>: <span class="string">&quot;states/images/iconfont-shumajiadian(1).png&quot;</span></div><div class="line">      },</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/activity/activity&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x6D3B;&#x52A8;&quot;</span>,</div><div class="line">        <span class="attr">&quot;iconPath&quot;</span>: <span class="string">&quot;states/images/cart(1).png&quot;</span>,</div><div class="line">        <span class="attr">&quot;selectedIconPath&quot;</span>: <span class="string">&quot;states/images/cart.png&quot;</span></div><div class="line">      },</div><div class="line">      {</div><div class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/mine/mine&quot;</span>,</div><div class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;&#x6211;&#x7684;&quot;</span>,</div><div class="line">        <span class="attr">&quot;iconPath&quot;</span>: <span class="string">&quot;states/images/wxb.png&quot;</span>,</div><div class="line">        <span class="attr">&quot;selectedIconPath&quot;</span>: <span class="string">&quot;states/images/wxb(1).png&quot;</span></div><div class="line">      }</div><div class="line">    ],</div><div class="line">    <span class="attr">&quot;selectedColor&quot;</span>: <span class="string">&quot;#32C6FF&quot;</span>,</div><div class="line">    <span class="attr">&quot;backgroundColor&quot;</span>: <span class="string">&quot;#fff&quot;</span></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<h1 id="&#x9996;&#x9875;"><a href="#&#x9996;&#x9875;" class="headerlink" title="&#x9996;&#x9875;"></a>&#x9996;&#x9875;</h1><p>&#x63A5;&#x4E0B;&#x6765;&#x5B8C;&#x6210;&#x9996;&#x9875;&#x5185;&#x5BB9;</p>
+<h2 id="swiper"><a href="#swiper" class="headerlink" title="swiper"></a>swiper</h2><p>&#x9996;&#x9875;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x5F53;&#x7136;&#x8981;&#x662F;banner&#x54AF;&#xFF01;</p>
+<p>&#x627E;&#x5230;<a href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html" target="_blank" rel="noopener">&#x6587;&#x6863;&#x4E2D;&#x7684;swiper&#x7EC4;&#x4EF6;</a>&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x51FA;&#x6765;&#x7684;api&#x8FDB;&#x884C;&#x4F7F;&#x7528;</p>
+<p><code>index.wxml</code><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">swiper</span> <span class="attr">class</span>=<span class="string">&quot;bannerBox&quot;</span></span></div><div class="line"><span class="tag">  <span class="attr">indicator-dots</span></span></div><div class="line"><span class="tag">  <span class="attr">circular</span></span></div><div class="line"><span class="tag">  <span class="attr">autoplay</span></span></div><div class="line"><span class="tag">&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">swiper-item</span></span></div><div class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;theSmall&quot;</span></span></div><div class="line"><span class="tag">    <span class="attr">wx:for</span>=<span class="string">&quot;{{banner}}&quot;</span></span></div><div class="line"><span class="tag">    <span class="attr">wx:for-item</span>=<span class="string">&quot;item&quot;</span></span></div><div class="line"><span class="tag">    <span class="attr">wx:key</span>=<span class="string">&quot;item.img&quot;</span></span></div><div class="line"><span class="tag">  &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;{{item.img}}&quot;</span> <span class="attr">class</span>=<span class="string">&quot;bannerImage&quot;</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p><code>index.js</code><br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Page({</div><div class="line">  data: {</div><div class="line">    banner: [{</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a03c5ee2.jpeg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;https://www.baidu.com&apos;</span></div><div class="line">    }, {</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a0538920.jpeg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;/card&apos;</span></div><div class="line">    }, {</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a0f40956.jpeg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;/hello&apos;</span></div><div class="line">    }, {</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a130047b.jpg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;/home&apos;</span></div><div class="line">    }, {</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a1351249.jpeg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;http://www.google.com&apos;</span></div><div class="line">    }, {</div><div class="line">      img: <span class="string">&apos;https://i.loli.net/2018/03/25/5ab75a13f22d6.jpg&apos;</span>,</div><div class="line">      path: <span class="string">&apos;asdfasdf&apos;</span></div><div class="line">    }]</div><div class="line">  }</div><div class="line">})</div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x5176;&#x4E2D;&#x8E29;&#x5230;&#x4E00;&#x4E2A;&#x5751;&#xFF0C;&#x5C31;&#x662F;&#x56FE;&#x7247;&#x7684;&#x5BBD;&#x5EA6;&#x5E76;&#x6CA1;&#x6709;&#x5360;&#x6EE1;<code>&lt;swiper-item&gt;</code>&#x6807;&#x7B7E;&#xFF0C;&#x5E76;&#x4E14;&#x56FE;&#x7247;&#x660E;&#x663E;&#x88AB;&#x62C9;&#x957F;&#x4E86;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x539F;&#x59CB;&#x6BD4;&#x4F8B;&#xFF0C;&#x7ED9;image&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;class&#xFF0C;&#x7136;&#x540E;&#x5199;&#x4E00;&#x4E2A;<code>width: 100%;</code>&#x5C31;&#x884C;&#x4E86;</p>
+<p>&#x5176;&#x5B9E;&#x6211;&#x66F4;&#x65B0;&#x628A;banner&#x8FD9;&#x4E2A;&#x6539;&#x6210;&#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x52A8;&#x624B;&#x5427;</p>
+<p>&#x9996;&#x5148;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x88C5;&#x7EC4;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x9762;&#x65B0;&#x5EFA;&#x7EC4;&#x4EF6;<code>banner</code><br><img src="https://i.loli.net/2018/04/12/5acf7c9f027a0.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 23.34.41.png"></p>
+<p>&#x7136;&#x540E;&#x628A;&#x521A;&#x624D;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x8FC7;&#x6765;</p>
+<p><code>banner.wxml</code><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--components/banner/banner.wxml--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">swiper</span> <span class="attr">class</span>=<span class="string">&quot;bannerBox&quot;</span></span></div><div class="line"><span class="tag">    <span class="attr">indicator-dots</span></span></div><div class="line"><span class="tag">    <span class="attr">circular</span></span></div><div class="line"><span class="tag">    <span class="attr">autoplay</span></span></div><div class="line"><span class="tag">  &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">swiper-item</span></span></div><div class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">&quot;theSmall&quot;</span></span></div><div class="line"><span class="tag">      <span class="attr">wx:for</span>=<span class="string">&quot;{{bannerList}}&quot;</span></span></div><div class="line"><span class="tag">      <span class="attr">wx:for-item</span>=<span class="string">&quot;item&quot;</span></span></div><div class="line"><span class="tag">      <span class="attr">wx:key</span>=<span class="string">&quot;item.img&quot;</span></span></div><div class="line"><span class="tag">    &gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;{{item.img}}&quot;</span> <span class="attr">class</span>=<span class="string">&quot;bannerImage&quot;</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p><code>banner.js</code><br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// components/banner/banner.js</span></div><div class="line">Component({</div><div class="line">  <span class="comment">/**</span></div><div class="line"><span class="comment">   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;</span></div><div class="line"><span class="comment">   */</span></div><div class="line">  properties: {</div><div class="line">    bannerList: <span class="built_in">Array</span></div><div class="line">  },</div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line"><span class="comment">   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;</span></div><div class="line"><span class="comment">   */</span></div><div class="line">  data: {</div><div class="line"></div><div class="line">  },</div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line"><span class="comment">   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;</span></div><div class="line"><span class="comment">   */</span></div><div class="line">  methods: {</div><div class="line"></div><div class="line">  }</div><div class="line">})</div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x56E0;&#x4E3A;&#x662F;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5728;<code>banner.json</code>&#x4E2D;&#x53BB;&#x786E;&#x5B9A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;<br><code>banner.json</code><br></p><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;component&quot;</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">&quot;usingComponents&quot;</span>: {</div><div class="line"></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x5176;&#x4E2D;<code>properties</code>&#x5B57;&#x6BB5;&#x662F;&#x83B7;&#x53D6;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5B9A;&#x4E49;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x6211;&#x5199;&#x7684;&#x662F;&#x7B80;&#x5199;&#xFF0C;&#x66F4;&#x591A;&#x53EF;&#x4EE5;&#x53BB;&#x67E5;&#x770B;<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/" target="_blank" rel="noopener">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6587;&#x6863;</a></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x6211;&#x521A;&#x624D;&#x91C7;&#x5751;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x8BF4;&#x9053;<br><img src="https://i.loli.net/2018/04/12/5acf7dae8ac4d.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 23.39.09.png"></p>
+<p>&#x6211;&#x4E00;&#x76F4;&#x4EE5;&#x4E3A;&#x662F;&#x5728;<code>banner.json</code>&#x4E2D;&#x53BB;&#x5B9A;&#x4E49;<code>usingComponents</code>&#x5B57;&#x6BB5;&#xFF0C;&#x540E;&#x6765;&#x67E5;&#x8BE2;&#x540E;&#x624D;&#x53D1;&#x73B0;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x5728;&#x9700;&#x8981;&#x5F15;&#x7528;&#x7684;&#x90A3;&#x4E2A;&#x9875;&#x9762;&#x7684;<code>xx.json</code>&#x6587;&#x4EF6;&#x4E2D;&#x53BB;&#x5B9A;&#x4E49;&#x3002;&#x76F8;&#x5F53;&#x4E8E;vue&#x4E2D;&#x53BB;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x540D;&#x5B57;&#x548C;&#x8DEF;&#x5F84;</p>
+<p>&#x6240;&#x4EE5;&#x5728;<code>index/</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9762;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;<code>index.json</code><br></p><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;usingComponents&quot;</span>: {</div><div class="line">    <span class="attr">&quot;banner&quot;</span>: <span class="string">&quot;../../components/banner/banner&quot;</span></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x7136;&#x540E;&#x5728;<code>index.wxml</code>&#x4E2D;&#x5199;&#x5230;<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--index.wxml--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">banner</span> <span class="attr">bannerList</span>=<span class="string">&quot;{{banner}}&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">banner</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></div></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x6210;&#x679C;<br><img src="https://i.loli.net/2018/04/12/5acf7eb9748e4.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2018-04-12 23.43.30.png"></p>
+<p>&#x672A;&#x5B8C;&#x5F85;&#x7EED;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>&#x6211;&#xFF0C;&#x66FC;&#x59A5;&#x601D;&#xFF0C;&#x6253;&#x94B1;</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&apos;QR&apos;); if (qr.style.display === &apos;none&apos;) {qr.style.display=&apos;block&apos;;} else {qr.style.display=&apos;none&apos;}">
+    <span>&#x6253;&#x8D4F;</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x5FAE;&#x4FE1;&#x652F;&#x4ED8;">
+        <p>&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x652F;&#x4ED8;&#x5B9D;">
+        <p>&#x652F;&#x4ED8;&#x5B9D;</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/weChat/" rel="tag"># weChat</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/12/2018.4.12-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E00;&#xFF09;/" rel="next" title="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E00;&#xFF09;">
+                <i class="fa fa-chevron-left"></i> &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E00;&#xFF09;
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            &#x6587;&#x7AE0;&#x76EE;&#x5F55;
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            &#x7AD9;&#x70B9;&#x6982;&#x89C8;
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg" alt="&#x66FC;&#x59A5;&#x601D;">
+          
+            <p class="site-author-name" itemprop="name">&#x66FC;&#x59A5;&#x601D;</p>
+            <p class="site-description motion-element" itemprop="description">&#x8BB0;&#x8F7D;&#x4E00;&#x70B9;&#x81EA;&#x5DF1;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">&#x65E5;&#x5FD7;</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">&#x5206;&#x7C7B;</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">&#x6807;&#x7B7E;</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/fairfarren/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="&#x82CF;&#x5929;&#x5929;~" target="_blank">&#x82CF;&#x5929;&#x5929;~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="&#x5C0F;&#x73CA;&#x73CA;" target="_blank">&#x5C0F;&#x73CA;&#x73CA;</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#&#x5BFC;&#x822A;"><span class="nav-number">1.</span> <span class="nav-text">&#x5BFC;&#x822A;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#&#x9996;&#x9875;"><span class="nav-number">2.</span> <span class="nav-text">&#x9996;&#x9875;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#swiper"><span class="nav-number">2.1.</span> <span class="nav-text">swiper</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &#xA9; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">&#x66FC;&#x59A5;&#x601D;</span>
+
+  
+</div>
+
+
+  <div class="powered-by">&#x7531; <a class="theme-link" href="https://hexo.io">Hexo</a> &#x5F3A;&#x529B;&#x9A71;&#x52A8;</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">&#x4E3B;&#x9898; &#x2014; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script></body></html>
