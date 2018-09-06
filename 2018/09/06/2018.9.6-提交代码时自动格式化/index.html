@@ -1,0 +1,838 @@
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="js,eslint,pretter,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x505A;&amp;#x5B8C;&amp;#x540E;&amp;#xFF0C;&amp;#x5927;&amp;#x54E5;&amp;#x8981;&amp;#x6C42;&amp;#x6211;&amp;#x4EEC;&amp;#x8981;&amp;#x5728;&amp;#x5F53;&amp;#x5148;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x52A0;&amp;#x4E0A;eslint&amp;#x548C;pr">
+<meta name="keywords" content="js,eslint,pretter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;">
+<meta property="og:url" content="https://fairfarren.github.io/2018/09/06/2018.9.6-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;/index.html">
+<meta property="og:site_name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
+<meta property="og:description" content="&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x505A;&amp;#x5B8C;&amp;#x540E;&amp;#xFF0C;&amp;#x5927;&amp;#x54E5;&amp;#x8981;&amp;#x6C42;&amp;#x6211;&amp;#x4EEC;&amp;#x8981;&amp;#x5728;&amp;#x5F53;&amp;#x5148;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x52A0;&amp;#x4E0A;eslint&amp;#x548C;pr">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-06T14:26:48.369Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;">
+<meta name="twitter:description" content="&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x505A;&amp;#x5B8C;&amp;#x540E;&amp;#xFF0C;&amp;#x5927;&amp;#x54E5;&amp;#x8981;&amp;#x6C42;&amp;#x6211;&amp;#x4EEC;&amp;#x8981;&amp;#x5728;&amp;#x5F53;&amp;#x5148;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x52A0;&amp;#x4E0A;eslint&amp;#x548C;pr">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fairfarren.github.io/2018/09/06/2018.9.6-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;/">
+
+
+
+
+
+  <title>&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316; | &#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">&#x4F60;&#x597D;&#xFF0C;&#x6211;&#x53EB;&#x66FC;&#x59A5;&#x601D;,&#x771F;&#x7684;&#x5F88;&#x66FC;&#x59A5;&#x601D;&#x7684;&#x66FC;&#x59A5;&#x601D;</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            &#x9996;&#x9875;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            &#x6807;&#x7B7E;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            &#x5206;&#x7C7B;
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            &#x5F52;&#x6863;
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fairfarren.github.io/2018/09/06/2018.9.6-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2017/09/23/59c53b40a2833.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="&#x66FC;&#x59A5;&#x601D;&#x7684;&#x535A;&#x5BA2;">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">&#x53D1;&#x8868;&#x4E8E;</span>
+              
+              <time title="&#x521B;&#x5EFA;&#x4E8E;" itemprop="dateCreated datePublished" datetime="2018-09-06T21:34:20+08:00">
+                2018-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">&#x5206;&#x7C7B;&#x4E8E;</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/&#x597D;&#x597D;&#x5B66;&#x4E60;&#x5929;&#x5929;&#x5411;&#x4E0A;/" itemprop="url" rel="index">
+                    <span itemprop="name">&#x597D;&#x597D;&#x5B66;&#x4E60;&#x5929;&#x5929;&#x5411;&#x4E0A;</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x505A;&#x5B8C;&#x540E;&#xFF0C;&#x5927;&#x54E5;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x5F53;&#x5148;&#x9879;&#x76EE;&#x4E2D;&#x52A0;&#x4E0A;<code>eslint</code>&#x548C;<code>prettier</code>&#x6765;&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x683C;&#x5F0F;&#x5316;&#x3002;</p>
+<p>Q: &#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x7528;&#xFF0C;&#x7B49;&#x5230;&#x9879;&#x76EE;&#x505A;&#x5B8C;&#x518D;&#x52A0;&#xFF1F;</p>
+<p>A: &#x56E0;&#x4E3A;&#x63A5;&#x624B;&#x7684;&#x9879;&#x76EE;&#x6846;&#x67B6;&#x662F;&#x516C;&#x53F8;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;&#x7684;&#xFF0C;&#x4E4B;&#x524D;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x914D;&#x3002;</p>
+<h1 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h1><h2 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><blockquote>
+<p>$ yarn add babel-eslin eslint eslint-config-standard eslint-loader eslint-plugin-import eslint-plugin-html eslint-plugin-standar eslint-plugin-vue &#x2013;dev</p>
+</blockquote>
+<p>&#x5B89;&#x88C5;&#x7684;&#x91CC;&#x9762;&#x6709;&#x89C4;&#x5219;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x7F16;&#x8BD1;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x662F;&#x7528;&#x5728; vue &#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B; vue &#x7684;&#x89C4;&#x5219;<code>eslint-plugin-vue</code></p>
+<h2 id="&#x914D;&#x7F6E;"><a href="#&#x914D;&#x7F6E;" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h2><p>&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;<code>.eslintrc.js</code>&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x5C31;&#x662F; eslint &#x7684;&#x914D;&#x7F6E;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = {</div><div class="line">  root: <span class="literal">true</span>,</div><div class="line">  parserOptions: {</div><div class="line">    parser: <span class="string">&quot;babel-eslint&quot;</span></div><div class="line">  },</div><div class="line">  env: {</div><div class="line">    browser: <span class="literal">true</span>,</div><div class="line">    node: <span class="literal">true</span></div><div class="line">  },</div><div class="line">  extends: [<span class="string">&quot;plugin:vue/recommended&quot;</span>, <span class="string">&quot;standard&quot;</span>],</div><div class="line">  plugins: [<span class="string">&quot;vue&quot;</span>],</div><div class="line">  rules: {</div><div class="line">    indent: [<span class="string">&quot;error&quot;</span>, <span class="number">2</span>, { <span class="attr">SwitchCase</span>: <span class="number">1</span> }],</div><div class="line">    <span class="string">&quot;space-before-function-paren&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-debugger&quot;</span>: process.env.NODE_ENV === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;error&quot;</span> : <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-undef&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-useless-escape&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-cond-assign&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/html-indent&quot;</span>: [<span class="string">&quot;error&quot;</span>, <span class="number">2</span>],</div><div class="line">    <span class="string">&quot;vue/max-attributes-per-line&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/html-self-closing&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/name-property-casing&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/require-default-prop&quot;</span>: <span class="string">&quot;off&quot;</span></div><div class="line">  },</div><div class="line">  globals: {}</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p><code>extends</code>&#x91CC;&#x9762;&#x7684;&#x662F;&#x9700;&#x8981;&#x7EE7;&#x627F;&#x7684;&#x89C4;&#x5219;</p>
+<p><code>rules</code>&#x91CC;&#x9762;&#x90FD;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x5177;&#x4F53;&#x89C4;&#x5219;&#x7F51;&#x4E0A;&#x968F;&#x4FBF;&#x627E;&#x627E;&#x5C31;&#x6709;</p>
+<p><a href="http://eslint.cn/docs/rules/" target="_blank" rel="noopener">eslint &#x89C4;&#x5219;</a></p>
+<h2 id="&#x4E0D;&#x53C2;&#x4E0E;"><a href="#&#x4E0D;&#x53C2;&#x4E0E;" class="headerlink" title="&#x4E0D;&#x53C2;&#x4E0E;"></a>&#x4E0D;&#x53C2;&#x4E0E;</h2><p>&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;<code>.eslintignore</code>&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;&#x4E0D;&#x53C2;&#x4E0E; eslint &#x89C4;&#x5219;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x6216;&#x6587;&#x4EF6;</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/node_modules/</div><div class="line">/static/</div></pre></td></tr></tbody></table></figure>
+<h1 id="prettier"><a href="#prettier" class="headerlink" title="prettier"></a>prettier</h1><h2 id="&#x5B89;&#x88C5;-1"><a href="#&#x5B89;&#x88C5;-1" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><blockquote>
+<p>$ yarn add eslint-config-prettie eslint-plugin-prettier prettier &#x2013;dev</p>
+</blockquote>
+<p>&#x5176;&#x4E2D;<code>eslint-plugin-prettier</code>&#x662F;&#x4E3A;&#x4E86;&#x8BA9;<code>prettier</code>&#x548C;<code>eslint</code>&#x516C;&#x7528;&#x4E00;&#x4E9B;&#x89C4;&#x5219;&#xFF0C;&#x800C;&#x4E0D;&#x51B2;&#x7A81;</p>
+<h2 id="&#x914D;&#x7F6E;-1"><a href="#&#x914D;&#x7F6E;-1" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h2><p>&#x53EF;&#x4EE5;&#x5728;<code>.eslintrc</code>&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = {</div><div class="line">  root: <span class="literal">true</span>,</div><div class="line">  parserOptions: {</div><div class="line">    parser: <span class="string">&quot;babel-eslint&quot;</span></div><div class="line">  },</div><div class="line">  env: {</div><div class="line">    browser: <span class="literal">true</span>,</div><div class="line">    node: <span class="literal">true</span></div><div class="line">  },</div><div class="line">  extends: [</div><div class="line">+    <span class="string">&quot;plugin:prettier/recommended&quot;</span>,</div><div class="line">    <span class="string">&quot;plugin:vue/recommended&quot;</span>,</div><div class="line">    <span class="string">&quot;standard&quot;</span>,</div><div class="line">+    <span class="string">&quot;prettier/standard&quot;</span></div><div class="line">  ],</div><div class="line">  <span class="comment">// required to lint *.vue files</span></div><div class="line">-  plugins: [<span class="string">&quot;vue&quot;</span>],</div><div class="line">+  plugins: [<span class="string">&quot;prettier&quot;</span>],</div><div class="line">  <span class="comment">// add your custom rules here</span></div><div class="line">  rules: {</div><div class="line">-    indent: [<span class="string">&quot;error&quot;</span>, <span class="number">2</span>],</div><div class="line">+    indent: [<span class="string">&quot;error&quot;</span>, <span class="number">2</span>, { <span class="attr">SwitchCase</span>: <span class="number">1</span> }],</div><div class="line">    <span class="string">&quot;space-before-function-paren&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-debugger&quot;</span>: process.env.NODE_ENV === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;error&quot;</span> : <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-undef&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-useless-escape&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;no-cond-assign&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/html-indent&quot;</span>: [<span class="string">&quot;error&quot;</span>, <span class="number">2</span>],</div><div class="line">    <span class="string">&quot;vue/max-attributes-per-line&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/html-self-closing&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/name-property-casing&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">    <span class="string">&quot;vue/require-default-prop&quot;</span>: <span class="string">&quot;off&quot;</span>,</div><div class="line">+    <span class="string">&quot;prettier/prettier&quot;</span>: [</div><div class="line">+      <span class="string">&quot;error&quot;</span>,</div><div class="line">+      {</div><div class="line">+        singleQuote: <span class="literal">true</span>,</div><div class="line">+        semi: <span class="literal">false</span>,</div><div class="line">+        tabWidth: <span class="number">2</span></div><div class="line">+      }</div><div class="line">+    ]</div><div class="line">  },</div><div class="line">  globals: {}</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p>&#x6CE8;&#x610F;<code>extends</code>&#x4E2D;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;</p>
+<p>&#x8FD9;&#x91CC;&#x4E5F;&#x7ED9;&#x51FA;<code>prettier</code>&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;</p>
+<p><a href="https://segmentfault.com/a/1190000012909159" target="_blank" rel="noopener">prettier &#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF08;&#x53C2;&#x6570;&#xFF09;&#x5B98;&#x7F51;&#x76F4;&#x8BD1;</a></p>
+<p>&#x5176;&#x4E2D;&#x6211;&#x7684;&#x914D;&#x7F6E;&#x662F;</p>
+<p><code>singleQuote</code>: true &#x5355;&#x5F15;&#x53F7;<br><code>semi</code>: false &#x7ED3;&#x5C3E;&#x4E0D;&#x8981;&#x5206;&#x53F7;<br><code>tabWidth</code>: 2 &#x7F29;&#x8FDB;&#x4E24;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x548C; eslint &#x4FDD;&#x6301;&#x4E00;&#x81F4;</p>
+<h1 id="&#x683C;&#x5F0F;&#x5316;"><a href="#&#x683C;&#x5F0F;&#x5316;" class="headerlink" title="&#x683C;&#x5F0F;&#x5316;"></a>&#x683C;&#x5F0F;&#x5316;</h1><h2 id="&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;"><a href="#&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;" class="headerlink" title="&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;"></a>&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;</h2><p>&#x56E0;&#x4E3A;&#x6211;&#x7528;&#x7684; vscode&#xFF0C;&#x5728; vscode &#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x5728;&#x6309;&#x4E0B;&#x4FDD;&#x5B58;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;</p>
+<h3 id="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a>&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h3><p>&#x5B89;&#x88C5;&#x63D2;&#x4EF6;<code>ESLint</code>&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6253;&#x5F00;&#x8FD9;&#x4E00;&#x9879;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4FDD;&#x5B58;&#x662F;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;&#x4E86;</p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;eslint.autoFixOnSave&quot;: true</div></pre></td></tr></tbody></table></figure>
+<h2 id="&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;"><a href="#&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;" class="headerlink" title="&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;"></a>&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;</h2><p>&#x5F00;&#x7BC7;&#x8BF4;&#x8FC7;&#xFF0C;&#x6211;&#x7684;&#x9879;&#x76EE;&#x662F;&#x5199;&#x5B8C;&#x540E;&#x518D;&#x52A0;&#x7684;<code>eslint</code>&#x548C;<code>prettier</code>&#xFF0C;&#x8BA9;&#x6211;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x70B9;&#x5F00;&#x53BB;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x6709;&#x70B9;&#x7D2F;&#x3002;&#x4E0D;&#x5982;&#x7528;&#x4EE3;&#x7801;&#x5E2E;&#x4F60;&#x4E00;&#x952E;&#x683C;&#x5F0F;&#x5316;</p>
+<p>&#x6253;&#x5F00;<code>package.json</code></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;script&quot;</span>: {</div><div class="line">    <span class="attr">&quot;format&quot;</span>: <span class="string">&quot;prettier --write &apos;**/*.{js,vue}&apos;&quot;</span>,</div><div class="line">    <span class="attr">&quot;fix&quot;</span>: <span class="string">&quot;eslint --fix &apos;**/*.{js,vue}&apos;&quot;</span></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x5C31;&#x53EA;&#x662F;&#x53BB;&#x68C0;&#x67E5;&#x4E86;<code>js</code>&#x548C;<code>vue</code>&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x522B;&#x7684;&#xFF0C;&#x6BD4;&#x5982;<code>css</code>,<code>sass</code>,<code>md</code>&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x52A0;&#x8FDB;&#x53BB;</p>
+<p>&#x7136;&#x540E;&#x6267;&#x884C;<code>yarn run fix</code>&#x5C31;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x628A;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316;<del>&#x6CE8;&#x610F;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6839;&#x76EE;&#x5F55;&#x4E5F;&#x6709;&#x9700;&#x8981;&#x683C;&#x5F0F;&#x7684;&#x81EA;&#x884C;&#x6539;&#x6539;</del></p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x6709;&#x4E9B;&#x5730;&#x65B9;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6539;&#x7684;&#xFF0C;&#x6BD4;&#x5982;<code>==</code>&#x6539;&#x4E3A;<code>===</code>&#x7B49;</p>
+<h1 id="&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;"><a href="#&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;" class="headerlink" title="&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;"></a>&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;</h1><p>&#x5728;&#x5408;&#x4F5C;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x4EBA;&#x90FD;&#x9009;&#x62E9;&#x4F7F;&#x7528;vscode&#xFF0C;atom&#x8FD9;&#x6837;&#x7684;&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x5728;&#x4FDD;&#x5B58;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;</p>
+<p>&#x4E5F;&#x4E0D;&#x80FD;&#x907F;&#x514D;&#x6709;&#x7684;&#x4EBA;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;&#x5C31;&#x63D0;&#x4EA4;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5C06;&#x683C;&#x5F0F;&#x5316;&#x7ED1;&#x5B9A;&#x5230;<code>git commit</code>&#x547D;&#x4EE4;&#x4E2D;</p>
+<h2 id="&#x5B89;&#x88C5;-2"><a href="#&#x5B89;&#x88C5;-2" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><blockquote>
+<p>$ yarn add pre-commit</p>
+<p>$ yarn add husky lint-staged &#x2013;dev</p>
+</blockquote>
+<p><code>pre-commit</code>&#x662F; git commit &#x65F6;&#x8C03;&#x7528;&#x7684;&#x94A9;&#x5B50;</p>
+<p>&#x6839;&#x636E;&#x8C03;&#x7528;<code>git commit</code>&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x94A9;&#x5B50;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x5C06;&#x6574;&#x4E2A;&#x76EE;&#x5F55;&#x90FD;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x5176;&#x5B9E;&#x6BD4;&#x8F83;&#x6D88;&#x8017;&#x6027;&#x80FD;</p>
+<p><code>husky</code>&#x548C;<code>lint-staged</code>&#x662F;&#x9488;&#x5BF9;<code>pre-commit</code>&#x65F6;&#x7684;&#x4F18;&#x5316;</p>
+<blockquote>
+<p><code>husky</code>: &#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8BA9;&#x4F60;&#x901A;&#x8FC7;npm scripts&#x6765;&#x8C03;&#x7528;&#x5404;&#x79CD;git hooks</p>
+<p><code>lint-staged</code>: &#x5229;&#x7528;git&#x7684;staged&#x7279;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x672C;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x53D8;&#x52A8;&#x6587;&#x4EF6;&#xFF0C;&#x8BA9;prettier/eslint&#x53EA;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;</p>
+</blockquote>
+<h2 id="&#x914D;&#x7F6E;-2"><a href="#&#x914D;&#x7F6E;-2" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h2><p><strong>&#x53EA;&#x4F7F;&#x7528;<code>pre-commit</code>&#x65F6;&#x7684;&#x914D;&#x7F6E;</strong></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;script&quot;</span>: {</div><div class="line">    <span class="attr">&quot;fix&quot;</span>: <span class="string">&quot;eslint --fix &apos;**/*.{js,vue}&apos;&quot;</span>,</div><div class="line">    <span class="attr">&quot;lint:js&quot;</span>: <span class="string">&quot;fix&quot;</span></div><div class="line">  },</div><div class="line">  <span class="attr">&quot;pre-commit&quot;</span>: [<span class="string">&quot;lint:js&quot;</span>]</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p><strong>&#x914D;&#x5408;<code>husky</code>&#x548C;<code>lint-staged</code>&#x4F7F;&#x7528;</strong></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;script&quot;</span>: {</div><div class="line">    <span class="attr">&quot;precommit&quot;</span>: <span class="string">&quot;lint-staged&quot;</span></div><div class="line">  },</div><div class="line">  <span class="attr">&quot;lint-staged&quot;</span>: {</div><div class="line">    <span class="attr">&quot;**/*.{js,vue}&quot;</span>: [<span class="string">&quot;eslint --fix&quot;</span>, <span class="string">&quot;git add&quot;</span>]</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></tbody></table></figure>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x901F;&#x5EA6;&#x867D;&#x7136;&#x6162;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x683C;&#x5F0F;&#x5316;&#x6240;&#x6709;&#x4EE3;&#x7801;</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x4F1A;&#x683C;&#x5F0F;&#x5316;&#x6709;&#x6539;&#x52A8;&#x7684;&#x6587;&#x4EF6;</p>
+<p>&#x5176;&#x5B9E;&#x6211;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;&#x5982;&#x679C;&#x9879;&#x76EE;&#x662F;&#x540E;&#x671F;&#x624D;&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x8BDD;&#xFF0C;&#x6DFB;&#x52A0;&#x8005;&#x5E94;&#x8BE5;&#x5148;&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x904D;&#x4EE3;&#x7801;&#x3002;</p>
+<ul>
+<li>&#x6CE8;&#xFF1A;<ol>
+<li>&#x4E24;&#x79CD;&#x914D;&#x7F6E;&#x8BF7;&#x4E0D;&#x8981;&#x540C;&#x65F6;&#x4F7F;&#x7528;</li>
+<li>&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2D;&#x914D;&#x7F6E;&#x53EA;&#x4F1A;&#x683C;&#x5F0F;&#x5316;&#x6709;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x53BB;&#x683C;&#x5F0F;&#x6CA1;&#x6709;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5168;&#x5C40;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x90A3;&#x5C31;&#x4F7F;&#x7528;<code>yarn run fix</code>&#x5148;&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x6B21;&#x4EE3;&#x7801;</li>
+</ol>
+</li>
+</ul>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>&#x6211;&#xFF0C;&#x66FC;&#x59A5;&#x601D;&#xFF0C;&#x6253;&#x94B1;</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&apos;QR&apos;); if (qr.style.display === &apos;none&apos;) {qr.style.display=&apos;block&apos;;} else {qr.style.display=&apos;none&apos;}">
+    <span>&#x6253;&#x8D4F;</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://i.loli.net/2017/09/23/59c53954bbd49.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x5FAE;&#x4FE1;&#x652F;&#x4ED8;">
+        <p>&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://i.loli.net/2017/09/23/59c539556ae63.jpeg" alt="&#x66FC;&#x59A5;&#x601D; &#x652F;&#x4ED8;&#x5B9D;">
+        <p>&#x652F;&#x4ED8;&#x5B9D;</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/eslint/" rel="tag"># eslint</a>
+          
+            <a href="/tags/pretter/" rel="tag"># pretter</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/16/2018.4.16-&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E09;&#xFF09;/" rel="next" title="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E09;&#xFF09;">
+                <i class="fa fa-chevron-left"></i> &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x8D70;&#xFF08;&#x4E09;&#xFF09;
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            &#x6587;&#x7AE0;&#x76EE;&#x5F55;
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            &#x7AD9;&#x70B9;&#x6982;&#x89C8;
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="https://i.loli.net/2017/09/23/59c53b40a2833.jpg" alt="&#x66FC;&#x59A5;&#x601D;">
+          
+            <p class="site-author-name" itemprop="name">&#x66FC;&#x59A5;&#x601D;</p>
+            <p class="site-description motion-element" itemprop="description">&#x8BB0;&#x8F7D;&#x4E00;&#x70B9;&#x81EA;&#x5DF1;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">&#x65E5;&#x5FD7;</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">&#x5206;&#x7C7B;</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">&#x6807;&#x7B7E;</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Fairfarren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="lykwowlol@gmail.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/chengduxiaoc/" title="&#x82CF;&#x5929;&#x5929;~" target="_blank">&#x82CF;&#x5929;&#x5929;~</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://caraws.github.io/" title="&#x5C0F;&#x73CA;&#x73CA;" target="_blank">&#x5C0F;&#x73CA;&#x73CA;</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://moonou.github.io/" title="moonou" target="_blank">moonou</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#eslint"><span class="nav-number">1.</span> <span class="nav-text">eslint</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5B89;&#x88C5;"><span class="nav-number">1.1.</span> <span class="nav-text">&#x5B89;&#x88C5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x914D;&#x7F6E;"><span class="nav-number">1.2.</span> <span class="nav-text">&#x914D;&#x7F6E;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x4E0D;&#x53C2;&#x4E0E;"><span class="nav-number">1.3.</span> <span class="nav-text">&#x4E0D;&#x53C2;&#x4E0E;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prettier"><span class="nav-number">2.</span> <span class="nav-text">prettier</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5B89;&#x88C5;-1"><span class="nav-number">2.1.</span> <span class="nav-text">&#x5B89;&#x88C5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x914D;&#x7F6E;-1"><span class="nav-number">2.2.</span> <span class="nav-text">&#x914D;&#x7F6E;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#&#x683C;&#x5F0F;&#x5316;"><span class="nav-number">3.</span> <span class="nav-text">&#x683C;&#x5F0F;&#x5316;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;"><span class="nav-number">3.1.</span> <span class="nav-text">&#x7F16;&#x8F91;&#x5668;&#x683C;&#x5F0F;&#x5316;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><span class="nav-number">3.1.1.</span> <span class="nav-text">&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;"><span class="nav-number">3.2.</span> <span class="nav-text">&#x547D;&#x4EE4;&#x884C;&#x683C;&#x5F0F;&#x5316;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;"><span class="nav-number">4.</span> <span class="nav-text">&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x5B89;&#x88C5;-2"><span class="nav-number">4.1.</span> <span class="nav-text">&#x5B89;&#x88C5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#&#x914D;&#x7F6E;-2"><span class="nav-number">4.2.</span> <span class="nav-text">&#x914D;&#x7F6E;</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &#xA9; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">&#x66FC;&#x59A5;&#x601D;</span>
+
+  
+</div>
+
+
+  <div class="powered-by">&#x7531; <a class="theme-link" href="https://hexo.io">Hexo</a> &#x5F3A;&#x529B;&#x9A71;&#x52A8;</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">&#x4E3B;&#x9898; &#x2014; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":90,"height":300,"hOffset":270},"mobile":{"show":true},"react":{"opacityDefault":1}});</script></body></html>
